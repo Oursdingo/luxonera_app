@@ -53,19 +53,25 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ opacity }}
     >
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-900 to-neutral-800" />
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/hero-watch.mp4" type="video/mp4" />
+          <source src="/videos/hero-watch.webm" type="video/webm" />
+          {/* Fallback pour les navigateurs sans support vidéo */}
+        </video>
 
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-            backgroundSize: "40px 40px",
-          }}
-        />
+        {/* Overlay sombre pour rendre le texte lisible */}
+        <div className="absolute inset-0 bg-black/60" />
+
+        {/* Gradient overlay pour un effet premium */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </div>
 
       {/* Content */}
