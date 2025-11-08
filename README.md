@@ -105,6 +105,7 @@ public/
 ### Optimisation automatique
 
 Next.js optimise automatiquement les images avec le composant `<Image>`. Vos images seront :
+
 - Redimensionnées automatiquement
 - Converties en WebP/AVIF
 - Lazy-loadées

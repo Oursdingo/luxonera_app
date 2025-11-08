@@ -1,39 +1,42 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { siteConfig } from '@/data/siteConfig'
-import { useCartStore } from '@/store/cartStore'
-import { cn } from '@/lib/utils'
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { siteConfig } from "@/data/siteConfig";
+import { useCartStore } from "@/store/cartStore";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
-  const totalItems = useCartStore((state) => state.getTotalItems())
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const totalItems = useCartStore((state) => state.getTotalItems());
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
+        "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm py-4'
-          : 'bg-transparent py-6'
+          ? "bg-white/95 backdrop-blur-md shadow-sm py-4"
+          : "bg-transparent py-6"
       )}
     >
       <nav className="container mx-auto px-6 max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="font-display text-2xl md:text-3xl tracking-wide hover:text-accent-gold transition-colors">
+          <Link
+            href="/"
+            className="font-display text-2xl md:text-3xl tracking-wide hover:text-accent-gold transition-colors"
+          >
             Luxonera
           </Link>
 
@@ -44,17 +47,19 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    'text-sm uppercase tracking-wider transition-colors relative group',
+                    "text-sm uppercase tracking-wider transition-colors relative group",
                     pathname === item.href
-                      ? 'text-black font-medium'
-                      : 'text-neutral-600 hover:text-black'
+                      ? "text-black font-medium"
+                      : "text-neutral-600 hover:text-black"
                   )}
                 >
                   {item.name}
                   <span
                     className={cn(
-                      'absolute -bottom-1 left-0 h-[2px] bg-accent-gold transition-all',
-                      pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                      "absolute -bottom-1 left-0 h-[2px] bg-accent-gold transition-all",
+                      pathname === item.href
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
                     )}
                   />
                 </Link>
@@ -129,10 +134,10 @@ export default function Header() {
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={cn(
-                      'block text-lg',
+                      "block text-lg",
                       pathname === item.href
-                        ? 'text-black font-medium'
-                        : 'text-neutral-600'
+                        ? "text-black font-medium"
+                        : "text-neutral-600"
                     )}
                   >
                     {item.name}
@@ -144,5 +149,5 @@ export default function Header() {
         )}
       </nav>
     </header>
-  )
+  );
 }

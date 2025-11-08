@@ -1,51 +1,51 @@
-'use client'
+"use client";
 
-import { useRef, useEffect } from 'react'
-import { useScroll, useTransform, motion } from 'framer-motion'
-import Link from 'next/link'
-import Button from '@/components/ui/Button'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRef, useEffect } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+import Link from "next/link";
+import Button from "@/components/ui/Button";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
 }
 
 export default function HeroSection() {
-  const heroRef = useRef(null)
-  const { scrollYProgress } = useScroll()
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.3], [1, 0.95])
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll();
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.3], [1, 0.95]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.hero-title', {
+      gsap.from(".hero-title", {
         opacity: 0,
         y: 50,
         duration: 1,
         delay: 0.3,
-        ease: 'power3.out',
-      })
+        ease: "power3.out",
+      });
 
-      gsap.from('.hero-subtitle', {
+      gsap.from(".hero-subtitle", {
         opacity: 0,
         y: 30,
         duration: 1,
         delay: 0.6,
-        ease: 'power3.out',
-      })
+        ease: "power3.out",
+      });
 
-      gsap.from('.hero-cta', {
+      gsap.from(".hero-cta", {
         opacity: 0,
         y: 20,
         duration: 1,
         delay: 0.9,
-        ease: 'power3.out',
-      })
-    })
+        ease: "power3.out",
+      });
+    });
 
-    return () => ctx.revert()
-  }, [])
+    return () => ctx.revert();
+  }, []);
 
   return (
     <motion.section
@@ -58,10 +58,14 @@ export default function HeroSection() {
 
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-          backgroundSize: '40px 40px',
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
+            backgroundSize: "40px 40px",
+          }}
+        />
       </div>
 
       {/* Content */}
@@ -91,8 +95,8 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Découvrez notre collection exclusive de montres de luxe,
-          où l'artisanat suisse rencontre l'élégance intemporelle
+          Découvrez notre collection exclusive de montres de luxe, où
+          l'artisanat suisse rencontre l'élégance intemporelle
         </motion.p>
 
         <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center">
@@ -102,7 +106,11 @@ export default function HeroSection() {
             </Button>
           </Link>
           <Link href="/about">
-            <Button variant="outline" size="lg" className="min-w-[200px] border-white text-white hover:bg-white hover:text-black">
+            <Button
+              variant="outline"
+              size="lg"
+              className="min-w-[200px] border-white text-white hover:bg-white hover:text-black"
+            >
               Notre Histoire
             </Button>
           </Link>
@@ -110,9 +118,9 @@ export default function HeroSection() {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+          className="absolute bottom-15 left-1/2 translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
           <svg
             className="w-6 h-6 text-white"
@@ -133,5 +141,5 @@ export default function HeroSection() {
       {/* Gradient Overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
     </motion.section>
-  )
+  );
 }
