@@ -64,7 +64,7 @@ export default function FeaturedCollection({
             Collection Exclusive
           </h2>
           <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto">
-            Chaque montre est une œuvre d'art horlogère, conçue pour sublimer
+            Chaque montre est une œuvre d&apos;art horlogère, conçue pour sublimer
             votre poignet
           </p>
         </div>

@@ -40,7 +40,7 @@ export default function WatchPage({ params }: PageProps) {
       watch.name
     } (${formatPrice(
       watch.price
-    )}). Pouvez-vous me donner plus d'informations?`;
+    )}). Pouvez-vous me donner plus d&apos;informations?`;
     openWhatsAppChat(message);
   };
 

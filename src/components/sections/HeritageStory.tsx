@@ -68,11 +68,11 @@ export default function HeritageStory() {
               Notre Histoire
             </p>
             <h2 className="text-4xl md:text-5xl font-display mb-6">
-              L'Art de l'Horlogerie
+              L&apos;Art de l&apos;Horlogerie
             </h2>
             <div className="space-y-4 text-lg text-neutral-700">
               <p>
-                Luxonera incarne l'excellence horlogère depuis sa création.
+                Luxonera incarne l&apos;excellence horlogère depuis sa création.
                 Spécialisés dans la distribution de montres de luxe, nous
                 offrons une sélection rigoureuse des plus belles créations
                 horlogères.
@@ -80,13 +80,13 @@ export default function HeritageStory() {
               <p>
                 Chaque montre de notre collection est choisie pour son artisanat
                 exceptionnel, son design intemporель et sa précision mécanique.
-                Nous croyons que porter une montre de luxe, c'est porter une
-                œuvre d'art au poignet.
+                Nous croyons que porter une montre de luxe, c&apos;est porter
+                une œuvre d&apos;art au poignet.
               </p>
               <p>
-                Notre mission est de rendre accessible l'excellence horlogère à
-                travers une expérience d'achat simple et personnalisée via
-                WhatsApp.
+                Notre mission est de rendre accessible l&apos;excellence
+                horlogère à travers une expérience d&apos;achat simple et
+                personnalisée via WhatsApp.
               </p>
             </div>
 
