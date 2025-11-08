@@ -92,7 +92,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          L'Excellence Horlogère
+          L&apos;Excellence Horlogère
         </motion.p>
 
         <motion.p
@@ -102,7 +102,7 @@ export default function HeroSection() {
           transition={{ delay: 0.3 }}
         >
           Découvrez notre collection exclusive de montres de luxe, où
-          l'artisanat suisse rencontre l'élégance intemporelle
+          l&apos;artisanat suisse rencontre l&apos;élégance intemporelle
         </motion.p>
 
         <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center">

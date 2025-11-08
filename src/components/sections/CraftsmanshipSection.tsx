@@ -26,7 +26,7 @@ const features = [
   },
   {
     title: 'Garantie Authenticité',
-    description: 'Certificat d\'authenticité avec chaque montre',
+    description: 'Certificat d&apos;authenticité avec chaque montre',
     icon: '🏆',
   },
 ]
@@ -60,7 +60,7 @@ export default function CraftsmanshipSection() {
             Excellence
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6">
-            Artisanat d'Exception
+            Artisanat d&apos;Exception
           </h2>
           <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto">
             Chaque montre Luxonera représente des heures de travail minutieux

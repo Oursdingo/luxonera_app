@@ -18,7 +18,7 @@ export const watches: Watch[] = [
       ],
     },
     description:
-      "Icône de l'horlogerie de luxe depuis 1972, la Royal Oak révolutionne les codes avec son boîtier octogonal et sa lunette vissée. En acier brossé et poli, elle arbore le légendaire motif 'Grande Tapisserie' sur son cadran bleu. Une pièce d'exception qui incarne l'excellence horlogère de la Vallée de Joux.",
+      "Icône de l&apos;horlogerie de luxe depuis 1972, la Royal Oak révolutionne les codes avec son boîtier octogonal et sa lunette vissée. En acier brossé et poli, elle arbore le légendaire motif &apos;Grande Tapisserie&apos; sur son cadran bleu. Une pièce d&apos;exception qui incarne l&apos;excellence horlogère de la Vallée de Joux.",
     specifications: {
       movement: "Calibre manufacture 4302 automatique",
       case: "Acier inoxydable 904L brossé/poli",
@@ -92,7 +92,7 @@ export const watches: Watch[] = [
       ],
     },
     description:
-      "Le Nautilus 5711/1A est l'une des montres les plus recherchées au monde. Son élégance sportive intemporelle, son cadran bleu horizontal embossé et son boîtier aux oreilles caractéristiques en font une icône absolue de l'horlogerie de luxe. Production discontinuée, objet de collection.",
+      "Le Nautilus 5711/1A est l&apos;une des montres les plus recherchées au monde. Son élégance sportive intemporelle, son cadran bleu horizontal embossé et son boîtier aux oreilles caractéristiques en font une icône absolue de l&apos;horlogerie de luxe. Production discontinuée, objet de collection.",
     specifications: {
       movement: "Calibre 26‑330 S C automatique",
       case: "Acier inoxydable brossé/poli",
@@ -162,7 +162,7 @@ export const watches: Watch[] = [
       ],
     },
     description:
-      "Chronographe sportif élégant avec mouvement manufacture visible. La Carrera incarne l'esprit racing de TAG Heuer avec son design épuré et son chronographe haute performance. Fond transparent pour admirer le calibre Heuer 02.",
+      "Chronographe sportif élégant avec mouvement manufacture visible. La Carrera incarne l&apos;esprit racing de TAG Heuer avec son design épuré et son chronographe haute performance. Fond transparent pour admirer le calibre Heuer 02.",
     specifications: {
       movement: "Calibre Heuer 02 manufacture automatique",
       case: "Acier inoxydable brossé/poli",
@@ -196,7 +196,7 @@ export const watches: Watch[] = [
       ],
     },
     description:
-      "Première montre-bracelet de l'histoire horlogère, créée en 1904 pour l'aviateur Alberto Santos-Dumont. Ligne architecturale iconique avec vis apparentes, chiffres romains et bracelet QuickSwitch interchangeable. L'élégance française à son apogée.",
+      "Première montre-bracelet de l&apos;histoire horlogère, créée en 1904 pour l&apos;aviateur Alberto Santos-Dumont. Ligne architecturale iconique avec vis apparentes, chiffres romains et bracelet QuickSwitch interchangeable. L&apos;élégance française à son apogée.",
     specifications: {
       movement: "Calibre 1847 MC automatique manufacture",
       case: "Acier et or jaune 18K (2 tons)",
@@ -230,7 +230,7 @@ export const watches: Watch[] = [
       ],
     },
     description:
-      "Design avant-gardiste avec boîtier en titane et lunette céramique. Le mouvement manufacture UNICO est visible avec son chronographe flyback. L'Art de la Fusion selon Hublot : matériaux high-tech et complications horlogères.",
+      "Design avant-gardiste avec boîtier en titane et lunette céramique. Le mouvement manufacture UNICO est visible avec son chronographe flyback. L&apos;Art de la Fusion selon Hublot : matériaux high-tech et complications horlogères.",
     specifications: {
       movement: "HUB1242 UNICO chronographe flyback manufacture",
       case: "Titane poli/satiné avec lunette céramique",
@@ -264,7 +264,7 @@ export const watches: Watch[] = [
       ],
     },
     description:
-      "Design minimaliste scandinave avec cadran blanc épuré et bracelet NATO en nylon. La montre Daniel Wellington incarne l'élégance décontractée moderne. Parfaite pour un style casual-chic accessible.",
+      "Design minimaliste scandinave avec cadran blanc épuré et bracelet NATO en nylon. La montre Daniel Wellington incarne l&apos;élégance décontractée moderne. Parfaite pour un style casual-chic accessible.",
     specifications: {
       movement: "Quartz japonais",
       case: "Acier inoxydable poli argent",
@@ -333,7 +333,7 @@ export const watches: Watch[] = [
       ],
     },
     description:
-      "Icône rétro des années 80 remise au goût du jour. Design digital vintage avec boîtier et bracelet dorés. Cette montre culte incarne l'esthétique nostalgique tout en restant ultra fonctionnelle. Un classique abordable et stylé.",
+      "Icône rétro des années 80 remise au goût du jour. Design digital vintage avec boîtier et bracelet dorés. Cette montre culte incarne l&apos;esthétique nostalgique tout en restant ultra fonctionnelle. Un classique abordable et stylé.",
     specifications: {
       movement: "Quartz digital module 3298",
       case: "Résine plaqué or",
@@ -403,7 +403,7 @@ export const watches: Watch[] = [
       ],
     },
     description:
-      "Chef-d'œuvre de haute horlogerie avec calendrier perpétuel et phases de lune. Boîtier or gris avec cadran argenté opalin. Cette Grande Complication nécessite un ajustement seulement en 2100. L'excellence horlogère suisse absolue.",
+      "Chef-d&apos;œuvre de haute horlogerie avec calendrier perpétuel et phases de lune. Boîtier or gris avec cadran argenté opalin. Cette Grande Complication nécessite un ajustement seulement en 2100. L&apos;excellence horlogère suisse absolue.",
     specifications: {
       movement: "Calibre 324 S Q automatique calendrier perpétuel",
       case: "Or gris 18 carats (750/1000)",
