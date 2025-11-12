@@ -10,14 +10,14 @@ export default function CartPage() {
   const items = useCartStore((state) => state.items)
 
   return (
-    <div className="pt-32 pb-20 min-h-screen">
-      <div className="container-luxury">
-        <h1 className="text-4xl md:text-5xl font-display mb-12">Votre Panier</h1>
+    <div className="pt-24 md:pt-32 pb-12 md:pb-20 min-h-screen">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-display mb-8 md:mb-12">Votre Panier</h1>
 
         {items.length === 0 ? (
-          <div className="text-center py-20">
+          <div className="text-center py-12 md:py-20">
             <svg
-              className="w-24 h-24 mx-auto mb-6 text-neutral-300"
+              className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 md:mb-6 text-neutral-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -29,8 +29,8 @@ export default function CartPage() {
                 d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
               />
             </svg>
-            <h2 className="text-2xl font-display mb-4">Votre panier est vide</h2>
-            <p className="text-neutral-600 mb-8">
+            <h2 className="text-xl md:text-2xl font-display mb-3 md:mb-4">Votre panier est vide</h2>
+            <p className="text-neutral-600 mb-6 md:mb-8 text-sm md:text-base">
               Découvrez notre collection de montres de luxe
             </p>
             <Link href="/catalog">
@@ -40,11 +40,11 @@ export default function CartPage() {
             </Link>
           </div>
         ) : (
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
             {/* Cart Items */}
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-lg shadow-sm border border-neutral-200 p-6">
-                <h2 className="text-2xl font-display mb-6">
+            <div className="lg:col-span-2 space-y-4 md:space-y-6">
+              <div className="bg-white rounded-lg shadow-sm border border-neutral-200 p-4 md:p-6">
+                <h2 className="text-xl md:text-2xl font-display mb-4 md:mb-6">
                   Articles ({items.length})
                 </h2>
                 <div className="divide-y divide-neutral-200">
@@ -55,7 +55,7 @@ export default function CartPage() {
               </div>
 
               {/* Continue Shopping */}
-              <div className="mt-6">
+              <div className="hidden md:block">
                 <Link href="/catalog">
                   <Button variant="ghost">
                     ← Continuer mes achats
@@ -65,8 +65,17 @@ export default function CartPage() {
             </div>
 
             {/* Checkout */}
-            <div>
+            <div className="lg:sticky lg:top-24 lg:self-start">
               <WhatsAppCheckout />
+            </div>
+
+            {/* Continue Shopping - Mobile */}
+            <div className="md:hidden lg:col-span-3">
+              <Link href="/catalog">
+                <Button variant="ghost" className="w-full">
+                  ← Continuer mes achats
+                </Button>
+              </Link>
             </div>
           </div>
         )}
