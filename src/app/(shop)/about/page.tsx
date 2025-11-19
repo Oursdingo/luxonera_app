@@ -11,14 +11,14 @@ export default function AboutPage() {
             Luxonera
           </h1>
           <p className="text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto">
-            L'excellence horlogère au service de votre style
+            L&apos;excellence horlogère au service de votre style
           </p>
         </div>
 
         {/* Story */}
         <div className="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed mb-20">
           <p>
-            Luxonera incarne l'excellence horlogère depuis sa création.
+            Luxonera incarne l&apos;excellence horlogère depuis sa création.
             Spécialisés dans la distribution de montres de luxe, nous offrons
             une sélection rigoureuse des plus belles créations horlogères disponibles sur le marché.
           </p>
@@ -26,21 +26,21 @@ export default function AboutPage() {
           <p>
             Chaque montre de notre collection est choisie pour son artisanat
             exceptionnel, son design intemporel et sa précision mécanique.
-            Nous croyons que porter une montre de luxe, c'est porter une œuvre
-            d'art au poignet, un héritage qui traverse le temps.
+            Nous croyons que porter une montre de luxe, c&apos;est porter une œuvre
+            d&apos;art au poignet, un héritage qui traverse le temps.
           </p>
 
           <p>
-            Notre mission est de rendre accessible l'excellence horlogère à travers
-            une expérience d'achat simple, transparente et personnalisée. Grâce à notre
-            service WhatsApp, vous bénéficiez d'un accompagnement sur mesure pour trouver
+            Notre mission est de rendre accessible l&apos;excellence horlogère à travers
+            une expérience d&apos;achat simple, transparente et personnalisée. Grâce à notre
+            service WhatsApp, vous bénéficiez d&apos;un accompagnement sur mesure pour trouver
             la montre qui correspond parfaitement à votre style et vos attentes.
           </p>
 
           <p>
             Chaque montre Luxonera est garantie authentique et accompagnée de tous
             les certificats nécessaires. Nous nous engageons à vous offrir non seulement
-            une montre d'exception, mais aussi un service client irréprochable.
+            une montre d&apos;exception, mais aussi un service client irréprochable.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function AboutPage() {
             <div className="text-5xl mb-4">💎</div>
             <h3 className="text-2xl font-display mb-3">Authenticité</h3>
             <p className="text-neutral-600">
-              Toutes nos montres sont garanties 100% authentiques avec certificats d'origine
+              Toutes nos montres sont garanties 100% authentiques avec certificats d&apos;origine
             </p>
           </div>
 

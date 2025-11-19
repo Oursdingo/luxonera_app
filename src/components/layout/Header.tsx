@@ -6,12 +6,20 @@ import { usePathname } from "next/navigation";
 import { siteConfig } from "@/data/siteConfig";
 import { useCartStore } from "@/store/cartStore";
 import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
+
+const logoFont = localFont({
+  src: "/fonts/Ceraso.otf",
+});
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const totalItems = useCartStore((state) => state.getTotalItems());
+
+  // Le header est transparent uniquement sur la page d'accueil
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +33,7 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
-        isScrolled
+        isScrolled || !isHomePage
           ? "bg-white/95 backdrop-blur-md shadow-sm py-4"
           : "bg-transparent py-6"
       )}
@@ -35,7 +43,10 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-display text-2xl md:text-3xl tracking-wide hover:text-accent-gold transition-colors"
+            className={cn(
+              `${logoFont.className} text-2xl md:text-3xl tracking-wide hover:text-accent-gold transition-colors`,
+              isScrolled || !isHomePage ? "text-black" : "text-white"
+            )}
           >
             Luxonera
           </Link>
@@ -48,9 +59,13 @@ export default function Header() {
                   href={item.href}
                   className={cn(
                     "text-sm uppercase tracking-wider transition-colors relative group",
-                    pathname === item.href
-                      ? "text-black font-medium"
-                      : "text-neutral-600 hover:text-black"
+                    isScrolled || !isHomePage
+                      ? pathname === item.href
+                        ? "text-black font-medium"
+                        : "text-neutral-600 hover:text-black"
+                      : pathname === item.href
+                      ? "text-white font-medium"
+                      : "text-white/80 hover:text-white"
                   )}
                 >
                   {item.name}
@@ -70,7 +85,12 @@ export default function Header() {
           {/* Cart Icon */}
           <Link
             href="/cart"
-            className="relative p-2 hover:bg-neutral-100 rounded-full transition-colors"
+            className={cn(
+              "relative p-2 rounded-full transition-colors",
+              isScrolled || !isHomePage
+                ? "hover:bg-neutral-100 text-black"
+                : "hover:bg-white/20 text-white"
+            )}
             aria-label="Panier"
           >
             <svg
@@ -95,7 +115,10 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className={cn(
+              "md:hidden p-2 transition-colors",
+              isScrolled || !isHomePage ? "text-black" : "text-white"
+            )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu"
           >
@@ -126,7 +149,14 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-neutral-200 pt-4">
+          <div
+            className={cn(
+              "md:hidden mt-4 pb-4 pt-4",
+              isScrolled || !isHomePage
+                ? "border-t border-neutral-200"
+                : "border-t border-white/20 bg-black/40 backdrop-blur-md rounded-lg"
+            )}
+          >
             <ul className="space-y-4">
               {siteConfig.navigation.map((item) => (
                 <li key={item.href}>
@@ -135,9 +165,13 @@ export default function Header() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={cn(
                       "block text-lg",
-                      pathname === item.href
-                        ? "text-black font-medium"
-                        : "text-neutral-600"
+                      isScrolled || !isHomePage
+                        ? pathname === item.href
+                          ? "text-black font-medium"
+                          : "text-neutral-600"
+                        : pathname === item.href
+                        ? "text-white font-medium"
+                        : "text-white/80"
                     )}
                   >
                     {item.name}

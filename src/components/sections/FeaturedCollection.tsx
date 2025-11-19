@@ -21,34 +21,42 @@ export default function FeaturedCollection({
 }: FeaturedCollectionProps) {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    // Filtrer les refs null
+    const validCards = cardsRef.current.filter((card) => card !== null);
+
     const ctx = gsap.context(() => {
       // Title animation
-      gsap.from(titleRef.current, {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: "power3.out",
-      });
+      if (titleRef.current) {
+        gsap.from(titleRef.current, {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+          opacity: 0,
+          y: 40,
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      }
 
-      // Cards stagger animation
-      gsap.from(".product-card", {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-        },
-        opacity: 0,
-        y: 60,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "power3.out",
-      });
-    });
+      // Cards stagger animation avec refs directes
+      if (validCards.length > 0) {
+        gsap.from(validCards, {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+          },
+          opacity: 0,
+          y: 60,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      }
+    }, sectionRef);
 
     return () => ctx.revert();
   }, []);
@@ -64,12 +72,17 @@ export default function FeaturedCollection({
             Collection Exclusive
           </h2>
           <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto">
-            Chaque montre est une œuvre d'art horlogère, conçue pour sublimer
+            Chaque montre est une œuvre d&apos;art horlogère, conçue pour sublimer
             votre poignet
           </p>
         </div>
 
-        <ProductGrid watches={watches} />
+        <ProductGrid
+          watches={watches}
+          cardRef={(el, index) => {
+            cardsRef.current[index] = el;
+          }}
+        />
 
         <div className="text-center mt-16">
           <Link href="/catalog">

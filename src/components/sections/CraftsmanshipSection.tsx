@@ -1,56 +1,74 @@
-'use client'
+"use client";
 
-import { useRef, useEffect } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
 }
 
 const features = [
   {
-    title: 'Mouvements Suisses',
-    description: 'Calibres automatiques et manufacture de la plus haute précision',
-    icon: '⚙️',
+    title: "Mouvements Suisses",
+    description:
+      "Calibres automatiques et manufacture de la plus haute précision",
+    icon: "⚙️",
   },
   {
-    title: 'Matériaux Nobles',
-    description: 'Or, platine, céramique et saphir pour une qualité exceptionnelle',
-    icon: '💎',
+    title: "Matériaux Nobles",
+    description:
+      "Or, platine, céramique et saphir pour une qualité exceptionnelle",
+    icon: "💎",
   },
   {
-    title: 'Finitions Main',
-    description: 'Chaque détail est travaillé par des maîtres horlogers',
-    icon: '✨',
+    title: "Finitions Main",
+    description: "Chaque détail est travaillé par des maîtres horlogers",
+    icon: "✨",
   },
   {
-    title: 'Garantie Authenticité',
-    description: 'Certificat d\'authenticité avec chaque montre',
-    icon: '🏆',
+    title: "Garantie Authenticité",
+    description: "Certificat d&apos;authenticité avec chaque montre",
+    icon: "🏆",
   },
-]
+];
 
 export default function CraftsmanshipSection() {
-  const sectionRef = useRef(null)
+  const sectionRef = useRef(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.craft-card', {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 70%',
-        },
-        opacity: 0,
-        y: 40,
-        stagger: 0.2,
-        duration: 0.8,
-        ease: 'power3.out',
-      })
-    })
+    const cards = cardsRef.current.filter((card) => card !== null);
 
-    return () => ctx.revert()
-  }, [])
+    if (cards.length === 0) return;
+
+    const ctx = gsap.context(() => {
+      // Utiliser ScrollTrigger avec once: true pour garantir l'animation
+      cards.forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          {
+            opacity: 0,
+            y: 40,
+          },
+          {
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 80%",
+              once: true, // Animation une seule fois
+            },
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: index * 0.2, // Stagger manuel
+            ease: "power3.out",
+          }
+        );
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section ref={sectionRef} className="py-20 md:py-32 bg-black text-white">
@@ -60,11 +78,11 @@ export default function CraftsmanshipSection() {
             Excellence
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6">
-            Artisanat d'Exception
+            Artisanat d&apos;Exception
           </h2>
           <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto">
-            Chaque montre Luxonera représente des heures de travail minutieux
-            et un savoir-faire transmis de génération en génération
+            Chaque montre Luxonera représente des heures de travail minutieux et
+            un savoir-faire transmis de génération en génération
           </p>
         </div>
 
@@ -72,7 +90,11 @@ export default function CraftsmanshipSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="craft-card bg-neutral-900 p-8 rounded-lg hover:bg-neutral-800 transition-all duration-300 group"
+              ref={(el) => {
+                cardsRef.current[index] = el;
+              }}
+              className="craft-card bg-neutral-900 p-8 rounded-lg hover:bg-neutral-800 transition-all duration-300 group opacity-100"
+              style={{ opacity: 1 }}
             >
               <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform">
                 {feature.icon}
@@ -90,8 +112,8 @@ export default function CraftsmanshipSection() {
               Prêt à découvrir votre prochaine montre?
             </h3>
             <p className="text-neutral-400 mb-6 max-w-xl mx-auto">
-              Contactez-nous sur WhatsApp pour un conseil personnalisé
-              et trouvez la montre qui vous correspond
+              Contactez-nous sur WhatsApp pour un conseil personnalisé et
+              trouvez la montre qui vous correspond
             </p>
             <a
               href="https://wa.me/22671363053?text=Bonjour!%20Je%20suis%20intéressé%20par%20vos%20montres%20de%20luxe"
@@ -108,5 +130,5 @@ export default function CraftsmanshipSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
