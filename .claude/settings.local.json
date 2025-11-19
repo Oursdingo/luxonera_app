@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(if not exist \"public\\fonts\" mkdir \"public\\fonts\")",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout /t 5)"
     ],
     "deny": [],
     "ask": []

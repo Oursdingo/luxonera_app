@@ -18,44 +18,57 @@ if (typeof window !== "undefined") {
 
 export default function HeroSection() {
   const heroRef = useRef(null);
+  const contentRef = useRef(null);
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const descriptionRef = useRef(null);
+  const ctaRef = useRef(null);
+
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.3], [1, 0.95]);
 
   useEffect(() => {
+    // GSAP animations d'entrée - one time
     const ctx = gsap.context(() => {
-      gsap.from(".hero-title", {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        delay: 0.3,
-        ease: "power3.out",
-      });
+      const tl = gsap.timeline();
 
-      gsap.from(".hero-subtitle", {
-        opacity: 0,
-        y: 30,
-        duration: 1,
-        delay: 0.5,
-        ease: "power3.out",
-      });
+      if (titleRef.current) {
+        tl.from(titleRef.current, {
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          ease: "power3.out",
+        }, 0.3);
+      }
 
-      gsap.from(".hero-description", {
-        opacity: 0,
-        y: 20,
-        duration: 1,
-        delay: 0.7,
-        ease: "power3.out",
-      });
+      if (subtitleRef.current) {
+        tl.from(subtitleRef.current, {
+          opacity: 0,
+          y: 30,
+          duration: 1,
+          ease: "power3.out",
+        }, 0.5);
+      }
 
-      gsap.from(".hero-cta", {
-        opacity: 0,
-        y: 20,
-        duration: 1,
-        delay: 0.9,
-        ease: "power3.out",
-      });
-    });
+      if (descriptionRef.current) {
+        tl.from(descriptionRef.current, {
+          opacity: 0,
+          y: 20,
+          duration: 1,
+          ease: "power3.out",
+        }, 0.7);
+      }
+
+      if (ctaRef.current) {
+        tl.from(ctaRef.current, {
+          opacity: 0,
+          y: 20,
+          duration: 1,
+          ease: "power3.out",
+        }, 0.9);
+      }
+    }, heroRef);
 
     return () => ctx.revert();
   }, []);
@@ -87,31 +100,39 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </div>
 
-      {/* Content */}
+      {/* Content - Framer Motion gère scale au scroll */}
       <motion.div
+        ref={contentRef}
         className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto"
         style={{ scale }}
       >
+        {/* GSAP gère les animations d'entrée via refs */}
         <h1
-          className={`hero-title font-logo text-7xl md:text-7xl lg:text-8xl mb-6 tracking-wide ${logoFont.className}`}
+          ref={titleRef}
+          className={`font-logo text-7xl md:text-7xl lg:text-8xl mb-6 tracking-wide ${logoFont.className}`}
         >
           Luxonera
         </h1>
 
         <p
-          className="hero-subtitle text-xl md:text-3xl font-light tracking-wider mb-12 text-neutral-300"
+          ref={subtitleRef}
+          className="text-xl md:text-3xl font-light tracking-wider mb-12 text-neutral-300"
         >
           L&apos;Excellence Horlogère
         </p>
 
         <p
-          className="hero-description text-lg md:text-xl text-neutral-400 mb-12 max-w-2xl mx-auto"
+          ref={descriptionRef}
+          className="text-lg md:text-xl text-neutral-400 mb-12 max-w-2xl mx-auto"
         >
           Découvrez notre collection exclusive de montres de luxe, où
           l&apos;artisanat suisse rencontre l&apos;élégance intemporelle
         </p>
 
-        <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center">
+        <div
+          ref={ctaRef}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
           <Link href="/catalog">
             <Button variant="primary" size="lg" className="min-w-[200px]">
               Découvrir la Collection
@@ -130,7 +151,7 @@ export default function HeroSection() {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-15 left-[51.5%] translate-x-1/2"
+          className="absolute bottom-15 left-[47.5%] md:left-[51.5%] translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >

@@ -3,9 +3,10 @@ import ProductCard from './ProductCard'
 
 interface ProductGridProps {
   watches: Watch[]
+  cardRef?: (el: HTMLDivElement | null, index: number) => void
 }
 
-export default function ProductGrid({ watches }: ProductGridProps) {
+export default function ProductGrid({ watches, cardRef }: ProductGridProps) {
   if (watches.length === 0) {
     return (
       <div className="text-center py-20">
@@ -16,8 +17,12 @@ export default function ProductGrid({ watches }: ProductGridProps) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-      {watches.map((watch) => (
-        <div key={watch.id} className="product-card">
+      {watches.map((watch, index) => (
+        <div
+          key={watch.id}
+          className="product-card"
+          ref={cardRef ? (el) => cardRef(el, index) : undefined}
+        >
           <ProductCard watch={watch} />
         </div>
       ))}
