@@ -121,9 +121,11 @@ export const watches: Watch[] = [
     price: 2450000,
     currency: "FCFA",
     images: {
-      main: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=800&q=80",
+      main: "/images/watches/casio/casio-main.png",
       gallery: [
-        "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800&q=80",
+        "/images/watches/casio/casio-1.png",
+        "/images/watches/casio/casio-2.png",
+        "/images/watches/casio/casio-3.png",
       ],
     },
     description:
@@ -156,9 +158,11 @@ export const watches: Watch[] = [
     price: 1850000,
     currency: "FCFA",
     images: {
-      main: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=80",
+      main: "/images/watches/casio_square/casio-1.png",
       gallery: [
-        "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800&q=80",
+        "/images/watches/casio_square/casio-1.png",
+        "/images/watches/casio_square/casio-2.png",
+        "/images/watches/casio_square/casio-3.png",
       ],
     },
     description:
@@ -190,9 +194,11 @@ export const watches: Watch[] = [
     price: 3200000,
     currency: "FCFA",
     images: {
-      main: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=800&q=80",
+      main: "/images/watches/welldington/danien-1.png",
       gallery: [
-        "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=800&q=80",
+        "/images/watches/welldington/danien-1.png",
+        "/images/watches/welldington/danien-2.png",
+        "/images/watches/welldington/danien-3.png",
       ],
     },
     description:
@@ -224,10 +230,8 @@ export const watches: Watch[] = [
     price: 4200000,
     currency: "FCFA",
     images: {
-      main: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800&q=80",
-      gallery: [
-        "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=800&q=80",
-      ],
+      main: "/images/watches/curren/curren-1.png",
+      gallery: ["/images/watches/curren/curren-1.png"],
     },
     description:
       "Design avant-gardiste avec boîtier en titane et lunette céramique. Le mouvement manufacture UNICO est visible avec son chronographe flyback. L&apos;Art de la Fusion selon Hublot : matériaux high-tech et complications horlogères.",
@@ -397,9 +401,11 @@ export const watches: Watch[] = [
     price: 38500000,
     currency: "FCFA",
     images: {
-      main: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=800&q=80",
+      main: "/images/watches/welldington/danien-2.png",
       gallery: [
-        "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800&q=80",
+        "/images/watches/welldington/danien-1.png",
+        "/images/watches/welldington/danien-2.png",
+        "/images/watches/welldington/danien-3.png",
       ],
     },
     description:
