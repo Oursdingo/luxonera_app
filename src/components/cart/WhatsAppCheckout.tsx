@@ -16,6 +16,16 @@ export default function WhatsAppCheckout() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [nameError, setNameError] = useState("");
 
+  // Personnalisation
+  const [showCustomization, setShowCustomization] = useState(false);
+  const [deliveryMessage, setDeliveryMessage] = useState("");
+  const [deliverToOther, setDeliverToOther] = useState(false);
+  const [recipientFirstName, setRecipientFirstName] = useState("");
+  const [recipientLastName, setRecipientLastName] = useState("");
+  const [recipientPhone, setRecipientPhone] = useState<string>();
+  const [recipientFirstNameError, setRecipientFirstNameError] = useState("");
+  const [recipientLastNameError, setRecipientLastNameError] = useState("");
+
   const validateName = (name: string) => {
     // Regex pour accepter uniquement les lettres, espaces, tirets et apostrophes
     const nameRegex = /^[a-zA-ZÀ-ÿ\s'-]+$/;
@@ -30,6 +40,28 @@ export default function WhatsAppCheckout() {
       setNameError("Le nom ne doit contenir que des lettres");
     } else {
       setNameError("");
+    }
+  };
+
+  const handleRecipientFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setRecipientFirstName(value);
+
+    if (value && !validateName(value)) {
+      setRecipientFirstNameError("Le prénom ne doit contenir que des lettres");
+    } else {
+      setRecipientFirstNameError("");
+    }
+  };
+
+  const handleRecipientLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setRecipientLastName(value);
+
+    if (value && !validateName(value)) {
+      setRecipientLastNameError("Le nom ne doit contenir que des lettres");
+    } else {
+      setRecipientLastNameError("");
     }
   };
 
@@ -48,6 +80,23 @@ export default function WhatsAppCheckout() {
       return;
     }
 
+    // Validation pour la livraison à une autre personne
+    if (deliverToOther) {
+      if (!recipientFirstName.trim() || !recipientLastName.trim() || !recipientPhone) {
+        toast.error("Erreur", {
+          description: "Veuillez remplir tous les champs du destinataire",
+        });
+        return;
+      }
+
+      if (!validateName(recipientFirstName) || !validateName(recipientLastName)) {
+        toast.error("Erreur", {
+          description: "Le nom et prénom du destinataire ne doivent contenir que des lettres",
+        });
+        return;
+      }
+    }
+
     setIsSubmitting(true);
 
     const cart = {
@@ -59,6 +108,12 @@ export default function WhatsAppCheckout() {
       total: getTotalPrice(),
       customerName,
       customerPhone,
+      deliveryMessage: deliveryMessage.trim() || undefined,
+      recipient: deliverToOther ? {
+        firstName: recipientFirstName,
+        lastName: recipientLastName,
+        phone: recipientPhone,
+      } : undefined,
     };
 
     openWhatsAppCheckout(cart);
@@ -115,6 +170,180 @@ export default function WhatsAppCheckout() {
             placeholder="Entrez votre numéro"
           />
         </div>
+      </div>
+
+      {/* Customization Toggle */}
+      <div className="border-t border-neutral-200 pt-4">
+        <button
+          type="button"
+          onClick={() => setShowCustomization(!showCustomization)}
+          className="w-full flex items-center justify-between p-4 bg-neutral-50 hover:bg-neutral-100 rounded-lg transition-colors"
+        >
+          <div className="flex items-center gap-2">
+            <svg
+              className="w-5 h-5 text-neutral-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+              />
+            </svg>
+            <span className="font-medium">Personnalisation</span>
+          </div>
+          <svg
+            className={`w-5 h-5 transition-transform ${
+              showCustomization ? "rotate-180" : ""
+            }`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+
+        {/* Customization Section */}
+        {showCustomization && (
+          <div className="mt-4 space-y-4 p-4 bg-white border border-neutral-200 rounded-lg">
+            {/* Delivery Message */}
+            <div>
+              <label htmlFor="deliveryMessage" className="block text-sm font-medium mb-2">
+                Message pour la livraison (optionnel)
+              </label>
+              <textarea
+                id="deliveryMessage"
+                value={deliveryMessage}
+                onChange={(e) => setDeliveryMessage(e.target.value)}
+                placeholder="Ajoutez un message spécial pour votre livraison..."
+                rows={3}
+                className="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:border-black transition-colors resize-none"
+                maxLength={200}
+              />
+              <p className="mt-1 text-xs text-neutral-500">
+                {deliveryMessage.length}/200 caractères
+              </p>
+            </div>
+
+            {/* Deliver to Another Person Toggle */}
+            <div className="border-t border-neutral-200 pt-4">
+              <label className="flex items-center justify-between cursor-pointer">
+                <div className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-neutral-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                  <span className="font-medium text-sm">
+                    Livrer à une autre personne
+                  </span>
+                </div>
+                <div className="relative">
+                  <input
+                    type="checkbox"
+                    checked={deliverToOther}
+                    onChange={(e) => setDeliverToOther(e.target.checked)}
+                    className="sr-only"
+                  />
+                  <div
+                    className={`block w-12 h-6 rounded-full transition-colors ${
+                      deliverToOther ? "bg-black" : "bg-neutral-300"
+                    }`}
+                  />
+                  <div
+                    className={`absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform ${
+                      deliverToOther ? "translate-x-6" : ""
+                    }`}
+                  />
+                </div>
+              </label>
+            </div>
+
+            {/* Recipient Details */}
+            {deliverToOther && (
+              <div className="space-y-4 pt-4 border-t border-neutral-200">
+                <h4 className="font-medium text-sm text-neutral-700">
+                  Informations du destinataire
+                </h4>
+
+                <div>
+                  <label htmlFor="recipientFirstName" className="block text-sm font-medium mb-2">
+                    Prénom du destinataire
+                  </label>
+                  <input
+                    id="recipientFirstName"
+                    type="text"
+                    placeholder="Jean"
+                    value={recipientFirstName}
+                    onChange={handleRecipientFirstNameChange}
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors ${
+                      recipientFirstNameError
+                        ? "border-red-500 focus:border-red-600"
+                        : "border-neutral-300 focus:border-black"
+                    }`}
+                    required
+                  />
+                  {recipientFirstNameError && (
+                    <p className="mt-1 text-sm text-red-600">{recipientFirstNameError}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="recipientLastName" className="block text-sm font-medium mb-2">
+                    Nom du destinataire
+                  </label>
+                  <input
+                    id="recipientLastName"
+                    type="text"
+                    placeholder="Dupont"
+                    value={recipientLastName}
+                    onChange={handleRecipientLastNameChange}
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors ${
+                      recipientLastNameError
+                        ? "border-red-500 focus:border-red-600"
+                        : "border-neutral-300 focus:border-black"
+                    }`}
+                    required
+                  />
+                  {recipientLastNameError && (
+                    <p className="mt-1 text-sm text-red-600">{recipientLastNameError}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="recipientPhone" className="block text-sm font-medium mb-2">
+                    Numéro de téléphone du destinataire
+                  </label>
+                  <PhoneInput
+                    international
+                    defaultCountry="BF"
+                    value={recipientPhone}
+                    onChange={setRecipientPhone}
+                    className="phone-input-custom"
+                    placeholder="Entrez le numéro du destinataire"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Order Summary */}

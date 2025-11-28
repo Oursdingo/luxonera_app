@@ -6,11 +6,29 @@ export const WHATSAPP_NUMBER = siteConfig.whatsapp.number;
 export function formatCartForWhatsApp(cart: CheckoutData): string {
   let message = "🛍️ NOUVELLE COMMANDE LUXONERA\n\n";
 
+  message += "👤 INFORMATIONS CLIENT:\n";
+  message += "------------------\n";
   if (cart.customerName) {
-    message += `👤 Client: ${cart.customerName}\n`;
+    message += `Nom: ${cart.customerName}\n`;
   }
   if (cart.customerPhone) {
     message += `📱 Téléphone: ${cart.customerPhone}\n`;
+  }
+
+  // Informations du destinataire si différent
+  if (cart.recipient) {
+    message += "\n🎁 DESTINATAIRE DE LA LIVRAISON:\n";
+    message += "------------------\n";
+    message += `Prénom: ${cart.recipient.firstName}\n`;
+    message += `Nom: ${cart.recipient.lastName}\n`;
+    message += `📱 Téléphone: ${cart.recipient.phone}\n`;
+  }
+
+  // Message de livraison personnalisé
+  if (cart.deliveryMessage) {
+    message += "\n💬 MESSAGE DE LIVRAISON:\n";
+    message += "------------------\n";
+    message += `${cart.deliveryMessage}\n`;
   }
 
   message += "\n📦 ARTICLES:\n";

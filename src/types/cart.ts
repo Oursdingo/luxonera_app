@@ -23,4 +23,10 @@ export interface CheckoutData {
   total: number
   customerName?: string
   customerPhone?: string
+  deliveryMessage?: string
+  recipient?: {
+    firstName: string
+    lastName: string
+    phone: string
+  }
 }
