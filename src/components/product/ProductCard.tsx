@@ -108,24 +108,24 @@ export default function ProductCard({ watch }: ProductCardProps) {
         </div>
 
         {/* === Informations produit === */}
-        <div className="p-6">
-          <p className="text-xs uppercase tracking-widest text-neutral-500 mb-2">
+        <div className="p-6 h-[200px] flex flex-col">
+          <p className="text-xs uppercase tracking-widest text-neutral-500 mb-2 line-clamp-1">
             {watch.collection}
           </p>
           <h3 className="font-display text-lg sm:text-xl mb-1 group-hover:text-accent-gold transition-colors line-clamp-2">
             {watch.name}
           </h3>
-          <p className="text-base sm:text-lg font-semibold">
+          <p className="text-base sm:text-lg font-semibold mb-auto">
             {formatPrice(watch.price)}
           </p>
 
           {/* Spécifications courtes */}
           <div className="mt-4 pt-4 border-t border-neutral-200 text-xs text-neutral-600 space-y-1">
             {watch.specifications?.movement && (
-              <p>{watch.specifications.movement}</p>
+              <p className="line-clamp-1">{watch.specifications.movement}</p>
             )}
             {watch.specifications?.diameter && (
-              <p>{watch.specifications.diameter}</p>
+              <p className="line-clamp-1">{watch.specifications.diameter}</p>
             )}
           </div>
         </div>

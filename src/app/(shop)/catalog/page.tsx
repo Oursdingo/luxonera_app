@@ -93,8 +93,9 @@ export default function CatalogPage() {
             </div>
 
             {/* Results count */}
-            <div className="flex items-end">
-              <p className="text-sm text-neutral-600">
+            <div>
+              <label className="block text-sm font-medium mb-2 invisible">Résultats</label>
+              <p className="text-sm text-neutral-600 px-4 py-2">
                 {filteredAndSortedWatches.length} montre{filteredAndSortedWatches.length > 1 ? 's' : ''} trouvée{filteredAndSortedWatches.length > 1 ? 's' : ''}
               </p>
             </div>

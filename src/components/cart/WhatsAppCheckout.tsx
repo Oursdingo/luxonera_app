@@ -10,7 +10,7 @@ import "react-phone-number-input/style.css";
 import { toast } from "sonner";
 
 export default function WhatsAppCheckout() {
-  const { items, getTotalPrice } = useCartStore();
+  const { items, getTotalPrice, clearCart } = useCartStore();
   const [customerName, setCustomerName] = useState("");
   const [customerPhone, setCustomerPhone] = useState<string>();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -118,9 +118,21 @@ export default function WhatsAppCheckout() {
 
     openWhatsAppCheckout(cart);
 
-    // Reset after a short delay
+    // Vider le panier et réinitialiser le formulaire après un court délai
     setTimeout(() => {
+      clearCart();
+      setCustomerName("");
+      setCustomerPhone(undefined);
+      setDeliveryMessage("");
+      setDeliverToOther(false);
+      setRecipientFirstName("");
+      setRecipientLastName("");
+      setRecipientPhone(undefined);
       setIsSubmitting(false);
+
+      toast.success("Commande envoyée", {
+        description: "Votre panier a été vidé",
+      });
     }, 1000);
   };
 
