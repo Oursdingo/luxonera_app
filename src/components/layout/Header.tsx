@@ -2,15 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/data/siteConfig";
 import { useCartStore } from "@/store/cartStore";
 import { cn } from "@/lib/utils";
-import localFont from "next/font/local";
-
-const logoFont = localFont({
-  src: "/fonts/Ceraso.otf",
-});
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,12 +72,16 @@ export default function Header() {
           {/* Logo - Au centre en mobile, à gauche en desktop */}
           <Link
             href="/"
-            className={cn(
-              `${logoFont.className} text-2xl md:text-3xl tracking-wide hover:text-accent-gold transition-colors order-2 md:order-1`,
-              isScrolled || !isHomePage ? "text-black" : "text-white"
-            )}
+            className="order-2 md:order-1 hover:opacity-80 transition-opacity"
           >
-            Luxonera
+            <Image
+              src="/images/logo/logo.png"
+              alt="Luxonera"
+              width={120}
+              height={40}
+              className="h-8 md:h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -79,21 +79,29 @@ export default function HeritageStory() {
               </h2>
               <div className="space-y-4 text-lg text-neutral-700">
                 <p>
-                  Luxonera incarne l&apos;excellence horlogère depuis sa création.
-                  Spécialisés dans la distribution de montres de luxe, nous
-                  offrons une sélection rigoureuse des plus belles créations
-                  horlogères.
+                  Luxonéra a été fondée en 2017 autour d&apos;une passion :
+                  proposer des montres fiables, élégantes et accessibles à tous.
                 </p>
                 <p>
-                  Chaque montre de notre collection est choisie pour son artisanat
-                  exceptionnel, son design intemporель et sa précision mécanique.
-                  Nous croyons que porter une montre de luxe, c&apos;est porter
-                  une œuvre d&apos;art au poignet.
+                  Au fil des années, nous avons appris à connaître ce que
+                  recherchent réellement les amateurs de belles montres : la
+                  qualité, le style, la durabilité et surtout la confiance.
                 </p>
                 <p>
-                  Notre mission est de rendre accessible l&apos;excellence
-                  horlogère à travers une expérience d&apos;achat simple et
-                  personnalisée via WhatsApp.
+                  Notre clientèle est variée, allant des jeunes passionnés qui
+                  découvrent l&apos;univers horloger aux adultes exigeants à la
+                  recherche d&apos;une pièce raffinée. Chacun mérite une montre
+                  qui reflète sa personnalité et son sens du détail.
+                </p>
+                <p>
+                  Nous offrons un service d&apos;accompagnement personnalisé
+                  pour aider chaque client à trouver la montre idéale, ainsi que
+                  la possibilité de rendre chaque cadeau unique avec des cartes
+                  personnalisées.
+                </p>
+                <p className="font-medium text-neutral-900">
+                  « Ne vous contentez pas d&apos;une montre ordinaire, car le
+                  temps est précieux et mérite d&apos;être honoré. »
                 </p>
               </div>
 
