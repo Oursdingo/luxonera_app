@@ -109,7 +109,7 @@ export default function WhatsAppCheckout() {
       customerName,
       customerPhone,
       deliveryMessage: deliveryMessage.trim() || undefined,
-      recipient: deliverToOther ? {
+      recipient: deliverToOther && recipientPhone ? {
         firstName: recipientFirstName,
         lastName: recipientLastName,
         phone: recipientPhone,
