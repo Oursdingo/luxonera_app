@@ -11,8 +11,8 @@ export default function Footer() {
             <h3 className="font-display text-3xl mb-4">Luxonera</h3>
             <p className="text-neutral-400 max-w-md mb-6">
               L&apos;excellence horlogère à portée de main. Découvrez notre
-              collection exclusive de montres de luxe et trouvez la pièce qui
-              sublimera votre poignet.
+              collection exclusive de montres et trouvez la pièce qui sublimera
+              votre poignet.
             </p>
             <div className="flex items-center gap-2 text-neutral-300">
               <svg
@@ -60,12 +60,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="https://www.instagram.com/l_homme_en_noirx/"
+                  className="hover:text-white transition-colors"
+                >
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="https://web.facebook.com/lionel.bouda.75"
+                  className="hover:text-white transition-colors"
+                >
                   Facebook
                 </a>
               </li>

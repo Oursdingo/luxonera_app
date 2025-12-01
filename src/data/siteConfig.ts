@@ -12,8 +12,8 @@ export const siteConfig = {
     { name: "Panier", href: "/cart" },
   ],
   social: {
-    instagram: "#",
-    facebook: "#",
+    instagram: "https://www.instagram.com/l_homme_en_noirx/",
+    facebook: "https://web.facebook.com/lionel.bouda.75",
     twitter: "#",
   },
 };
