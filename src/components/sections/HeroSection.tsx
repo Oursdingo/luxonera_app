@@ -34,39 +34,55 @@ export default function HeroSection() {
       const tl = gsap.timeline();
 
       if (titleRef.current) {
-        tl.from(titleRef.current, {
-          opacity: 0,
-          y: 50,
-          duration: 1,
-          ease: "power3.out",
-        }, 0.3);
+        tl.from(
+          titleRef.current,
+          {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out",
+          },
+          0.3
+        );
       }
 
       if (subtitleRef.current) {
-        tl.from(subtitleRef.current, {
-          opacity: 0,
-          y: 30,
-          duration: 1,
-          ease: "power3.out",
-        }, 0.5);
+        tl.from(
+          subtitleRef.current,
+          {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            ease: "power3.out",
+          },
+          0.5
+        );
       }
 
       if (descriptionRef.current) {
-        tl.from(descriptionRef.current, {
-          opacity: 0,
-          y: 20,
-          duration: 1,
-          ease: "power3.out",
-        }, 0.7);
+        tl.from(
+          descriptionRef.current,
+          {
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            ease: "power3.out",
+          },
+          0.7
+        );
       }
 
       if (ctaRef.current) {
-        tl.from(ctaRef.current, {
-          opacity: 0,
-          y: 20,
-          duration: 1,
-          ease: "power3.out",
-        }, 0.9);
+        tl.from(
+          ctaRef.current,
+          {
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            ease: "power3.out",
+          },
+          0.9
+        );
       }
     }, heroRef);
 
@@ -125,8 +141,8 @@ export default function HeroSection() {
           ref={descriptionRef}
           className="text-lg md:text-xl text-neutral-400 mb-12 max-w-2xl mx-auto"
         >
-          Découvrez notre collection exclusive de montres de luxe, où
-          l&apos;artisanat suisse rencontre l&apos;élégance intemporelle
+          Découvrez notre collection exclusive de montres, où l&apos;artisanat
+          suisse rencontre l&apos;élégance intemporelle
         </p>
 
         <div

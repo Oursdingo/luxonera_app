@@ -72,8 +72,8 @@ export default function FeaturedCollection({
             Collection Exclusive
           </h2>
           <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto">
-            Chaque montre est une œuvre d&apos;art horlogère, conçue pour sublimer
-            votre poignet
+            Ne vous contentez pas d&apos;une montre ordinaire car le temps est
+            précieux et mérite d&apos;être honoré
           </p>
         </div>
 

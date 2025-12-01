@@ -4,7 +4,12 @@
       "Bash(if not exist \"public\\fonts\" mkdir \"public\\fonts\")",
       "Bash(mkdir:*)",
       "Bash(npm run dev:*)",
-      "Bash(timeout /t 5)"
+      "Bash(timeout /t 5)",
+      "Bash(git restore:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

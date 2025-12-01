@@ -75,7 +75,7 @@ export default function HeritageStory() {
                 Notre Histoire
               </p>
               <h2 className="text-4xl md:text-5xl font-display mb-6">
-                L&apos;Art de l&apos;Horlogerie
+                Une Passion depuis 2017
               </h2>
               <div className="space-y-4 text-lg text-neutral-700">
                 <p>
@@ -110,7 +110,7 @@ export default function HeritageStory() {
                   <p className="text-3xl font-display text-accent-gold mb-2">
                     100%
                   </p>
-                  <p className="text-sm text-neutral-600">Authentiques</p>
+                  <p className="text-sm text-neutral-600">Qualité</p>
                 </div>
                 <div>
                   <p className="text-3xl font-display text-accent-gold mb-2">
