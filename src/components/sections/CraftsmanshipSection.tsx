@@ -3,6 +3,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Search, Watch, Award, Headphones } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -13,23 +14,23 @@ const features = [
     title: "Sélection Rigoureuse",
     description:
       "Chaque montre est minutieusement sélectionnée pour sa qualité, son design et son excellence horlogère",
-    icon: "🔍",
+    icon: Search,
   },
   {
     title: "Collection Variée",
     description:
       "Un large choix de montres prestigieuses pour tous les styles et toutes les occasions",
-    icon: "⌚",
+    icon: Watch,
   },
   {
     title: "Expertise Horlogère",
     description: "Notre connaissance approfondie vous guide vers la montre qui vous correspond parfaitement",
-    icon: "⚙️",
+    icon: Award,
   },
   {
     title: "Service Premium",
     description: "Accompagnement personnalisé et service client disponible 24/7 pour vous conseiller",
-    icon: "💎",
+    icon: Headphones,
   },
 ];
 
@@ -87,22 +88,25 @@ export default function CraftsmanshipSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              ref={(el) => {
-                cardsRef.current[index] = el;
-              }}
-              className="craft-card bg-neutral-900 p-8 rounded-lg hover:bg-neutral-800 transition-all duration-300 group opacity-100"
-              style={{ opacity: 1 }}
-            >
-              <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform">
-                {feature.icon}
+          {features.map((feature, index) => {
+            const IconComponent = feature.icon;
+            return (
+              <div
+                key={index}
+                ref={(el) => {
+                  cardsRef.current[index] = el;
+                }}
+                className="craft-card bg-neutral-900 p-8 rounded-lg hover:bg-neutral-800 transition-all duration-300 group opacity-100"
+                style={{ opacity: 1 }}
+              >
+                <div className="mb-6 transform group-hover:scale-110 transition-transform text-accent-gold">
+                  <IconComponent size={48} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-display mb-3">{feature.title}</h3>
+                <p className="text-neutral-400">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-display mb-3">{feature.title}</h3>
-              <p className="text-neutral-400">{feature.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA Section */}
