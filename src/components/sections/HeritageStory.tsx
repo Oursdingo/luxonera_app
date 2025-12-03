@@ -79,8 +79,10 @@ export default function HeritageStory() {
               </h2>
               <div className="space-y-4 text-lg text-neutral-700">
                 <p>
-                  Luxonéra a été fondée en 2017 autour d&apos;une passion :
-                  proposer des montres fiables, élégantes et accessibles à tous.
+                  Luxonéra est née d&apos;un véritable amour pour
+                  l&apos;horlogerie, avec une mission claire : offrir une
+                  collection des montres diverses, élégantes et fiables
+                  accessibles a tous.
                 </p>
                 <p>
                   Au fil des années, nous avons appris à connaître ce que
@@ -108,15 +110,15 @@ export default function HeritageStory() {
               <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-neutral-200">
                 <div>
                   <p className="text-3xl font-display text-accent-gold mb-2">
-                    100%
+                    2017
                   </p>
-                  <p className="text-sm text-neutral-600">Qualité</p>
+                  <p className="text-sm text-neutral-600">Depuis</p>
                 </div>
                 <div>
                   <p className="text-3xl font-display text-accent-gold mb-2">
-                    2 ans
+                    Premium
                   </p>
-                  <p className="text-sm text-neutral-600">Garantie</p>
+                  <p className="text-sm text-neutral-600">Sélection</p>
                 </div>
                 <div>
                   <p className="text-3xl font-display text-accent-gold mb-2">

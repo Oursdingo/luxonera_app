@@ -10,26 +10,26 @@ if (typeof window !== "undefined") {
 
 const features = [
   {
-    title: "Mouvements Suisses",
+    title: "Sélection Rigoureuse",
     description:
-      "Calibres automatiques et manufacture de la plus haute précision",
+      "Chaque montre est minutieusement sélectionnée pour sa qualité, son design et son excellence horlogère",
+    icon: "🔍",
+  },
+  {
+    title: "Collection Variée",
+    description:
+      "Un large choix de montres prestigieuses pour tous les styles et toutes les occasions",
+    icon: "⌚",
+  },
+  {
+    title: "Expertise Horlogère",
+    description: "Notre connaissance approfondie vous guide vers la montre qui vous correspond parfaitement",
     icon: "⚙️",
   },
   {
-    title: "Matériaux Nobles",
-    description:
-      "Or, platine, céramique et saphir pour une qualité exceptionnelle",
+    title: "Service Premium",
+    description: "Accompagnement personnalisé et service client disponible 24/7 pour vous conseiller",
     icon: "💎",
-  },
-  {
-    title: "Finitions Main",
-    description: "Chaque détail est travaillé par des maîtres horlogers",
-    icon: "✨",
-  },
-  {
-    title: "Garantie Authenticité",
-    description: "Certificat d&apos;authenticité avec chaque montre",
-    icon: "🏆",
   },
 ];
 
@@ -75,14 +75,14 @@ export default function CraftsmanshipSection() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16">
           <p className="text-sm uppercase tracking-widest text-accent-gold mb-4">
-            Excellence
+            Notre Engagement
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6">
-            Artisanat d&apos;Exception
+            Votre Expert en Montres de Luxe
           </h2>
           <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto">
-            Chaque montre Luxonera représente des heures de travail minutieux et
-            un savoir-faire transmis de génération en génération
+            Chez LUXONÉRA, chaque montre est soigneusement sélectionnée auprès des meilleures marques horlogères.
+            Nous vous proposons des pièces d&apos;exception authentiques avec un service personnalisé.
           </p>
         </div>
 

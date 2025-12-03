@@ -141,8 +141,7 @@ export default function HeroSection() {
           ref={descriptionRef}
           className="text-lg md:text-xl text-neutral-400 mb-12 max-w-2xl mx-auto"
         >
-          Découvrez notre collection exclusive de montres, où l&apos;artisanat
-          suisse rencontre l&apos;élégance intemporelle
+          Découvrez notre sélection exclusive de montres de prestige, alliant raffinement et élégance intemporelle
         </p>
 
         <div
