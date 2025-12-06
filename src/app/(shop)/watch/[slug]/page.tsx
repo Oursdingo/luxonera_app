@@ -26,7 +26,7 @@ export default function WatchPage({ params }: PageProps) {
     notFound();
   }
 
-  const allImages = [watch.images.main, ...watch.images.gallery];
+  const allImages = [watch.images.main, ...(watch.images.gallery || [])];
 
   const placeholderImage =
     'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="800"%3E%3Crect fill="%23f5f5f5" width="800" height="800"/%3E%3Ctext fill="%23999" font-family="serif" font-size="48" x="50%25" y="50%25" text-anchor="middle" dominant-baseline="middle"%3ELuxonera%3C/text%3E%3C/svg%3E';
@@ -44,10 +44,14 @@ export default function WatchPage({ params }: PageProps) {
     openWhatsAppChat(message);
   };
 
-  // Get related watches from same collection
-  const relatedWatches = watches
-    .filter((w) => w.collection === watch.collection && w.id !== watch.id)
-    .slice(0, 3);
+  // Get color variants from same collection (excluding Main and current watch)
+  const colorVariants = watches
+    .filter((w) =>
+      w.collection === watch.collection &&
+      w.id !== watch.id &&
+      w.color !== "Main"
+    )
+    .slice(0, 6);
 
   return (
     <div className="pt-32 pb-20">
@@ -106,6 +110,14 @@ export default function WatchPage({ params }: PageProps) {
             <h1 className="text-4xl md:text-5xl font-display mb-4">
               {watch.name}
             </h1>
+            {watch.color && watch.color !== "Main" && (
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-100 text-neutral-800 rounded-full">
+                  <span className="w-3 h-3 rounded-full bg-neutral-400"></span>
+                  <span className="font-medium">{watch.color}</span>
+                </span>
+              </div>
+            )}
             <p className="text-3xl font-medium mb-6">
               {formatPrice(watch.price)}
             </p>
@@ -180,67 +192,83 @@ export default function WatchPage({ params }: PageProps) {
             </div>
 
             {/* Specifications */}
-            <div className="border-t border-neutral-200 pt-8">
-              <h2 className="text-2xl font-display mb-6">Spécifications</h2>
-              <dl className="space-y-4">
-                <div className="flex justify-between py-3 border-b border-neutral-100">
-                  <dt className="font-medium text-neutral-800">Mouvement</dt>
-                  <dd className="text-neutral-600">
-                    {watch.specifications.movement}
-                  </dd>
-                </div>
-                <div className="flex justify-between py-3 border-b border-neutral-100">
-                  <dt className="font-medium text-neutral-800">Boîtier</dt>
-                  <dd className="text-neutral-600">
-                    {watch.specifications.case}
-                  </dd>
-                </div>
-                <div className="flex justify-between py-3 border-b border-neutral-100">
-                  <dt className="font-medium text-neutral-800">Diamètre</dt>
-                  <dd className="text-neutral-600">
-                    {watch.specifications.diameter}
-                  </dd>
-                </div>
-                <div className="flex justify-between py-3 border-b border-neutral-100">
-                  <dt className="font-medium text-neutral-800">Étanchéité</dt>
-                  <dd className="text-neutral-600">
-                    {watch.specifications.waterResistance}
-                  </dd>
-                </div>
-                <div className="flex justify-between py-3 border-b border-neutral-100">
-                  <dt className="font-medium text-neutral-800">Bracelet</dt>
-                  <dd className="text-neutral-600">
-                    {watch.specifications.strap}
-                  </dd>
-                </div>
-              </dl>
+            {watch.specifications && (
+              <div className="border-t border-neutral-200 pt-8">
+                <h2 className="text-2xl font-display mb-6">Spécifications</h2>
+                <dl className="space-y-4">
+                  {watch.specifications.movement && (
+                    <div className="flex justify-between py-3 border-b border-neutral-100">
+                      <dt className="font-medium text-neutral-800">Mouvement</dt>
+                      <dd className="text-neutral-600">
+                        {watch.specifications.movement}
+                      </dd>
+                    </div>
+                  )}
+                  {watch.specifications.case && (
+                    <div className="flex justify-between py-3 border-b border-neutral-100">
+                      <dt className="font-medium text-neutral-800">Boîtier</dt>
+                      <dd className="text-neutral-600">
+                        {watch.specifications.case}
+                      </dd>
+                    </div>
+                  )}
+                  {watch.specifications.diameter && (
+                    <div className="flex justify-between py-3 border-b border-neutral-100">
+                      <dt className="font-medium text-neutral-800">Diamètre</dt>
+                      <dd className="text-neutral-600">
+                        {watch.specifications.diameter}
+                      </dd>
+                    </div>
+                  )}
+                  {watch.specifications.waterResistance && (
+                    <div className="flex justify-between py-3 border-b border-neutral-100">
+                      <dt className="font-medium text-neutral-800">Étanchéité</dt>
+                      <dd className="text-neutral-600">
+                        {watch.specifications.waterResistance}
+                      </dd>
+                    </div>
+                  )}
+                  {watch.specifications.strap && (
+                    <div className="flex justify-between py-3 border-b border-neutral-100">
+                      <dt className="font-medium text-neutral-800">Bracelet</dt>
+                      <dd className="text-neutral-600">
+                        {watch.specifications.strap}
+                      </dd>
+                    </div>
+                  )}
+                </dl>
 
-              {/* Features */}
-              <div className="mt-6">
-                <h3 className="font-medium mb-3">Caractéristiques</h3>
-                <ul className="space-y-2">
-                  {watch.specifications.features.map((feature, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-2 text-neutral-600"
-                    >
-                      <span className="text-accent-gold mt-1">✓</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Features */}
+                {watch.specifications.features && watch.specifications.features.length > 0 && (
+                  <div className="mt-6">
+                    <h3 className="font-medium mb-3">Caractéristiques</h3>
+                    <ul className="space-y-2">
+                      {watch.specifications.features.map((feature, index) => (
+                        <li
+                          key={index}
+                          className="flex items-start gap-2 text-neutral-600"
+                        >
+                          <span className="text-accent-gold mt-1">✓</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-            </div>
+            )}
           </div>
         </div>
 
-        {/* Related Products */}
-        {relatedWatches.length > 0 && (
+        {/* Color Variants */}
+        {colorVariants.length > 0 && (
           <div>
-            <h2 className="text-3xl font-display mb-8">Montres similaires</h2>
+            <h2 className="text-3xl font-display mb-8">
+              Autres couleurs disponibles
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {relatedWatches.map((relatedWatch) => (
-                <ProductCard key={relatedWatch.id} watch={relatedWatch} />
+              {colorVariants.map((variant) => (
+                <ProductCard key={variant.id} watch={variant} mode="product" />
               ))}
             </div>
           </div>

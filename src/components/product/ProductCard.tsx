@@ -10,9 +10,10 @@ import Button from "@/components/ui/Button";
 
 interface ProductCardProps {
   watch: Watch;
+  mode?: "collection" | "product"; // collection = accueil, product = catalogue/détail
 }
 
-export default function ProductCard({ watch }: ProductCardProps) {
+export default function ProductCard({ watch, mode = "product" }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [imageError, setImageError] = useState(false);
   const addItem = useCartStore((state) => state.addItem);
@@ -31,9 +32,14 @@ export default function ProductCard({ watch }: ProductCardProps) {
 
   const hoverImage = watch.images?.gallery?.[0] || mainImage;
 
+  // URL de redirection selon le mode
+  const linkHref = mode === "collection"
+    ? `/catalog?collection=${encodeURIComponent(watch.collection)}`
+    : `/watch/${watch.id}`;
+
   return (
     <Link
-      href={`/watch/${watch.slug}`}
+      href={linkHref}
       className="group block w-full sm:w-[300px] md:w-[340px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -75,7 +81,12 @@ export default function ProductCard({ watch }: ProductCardProps) {
 
           {/* Badges */}
           <div className="absolute top-4 left-4 flex flex-col gap-2">
-            {watch.featured && (
+            {mode === "collection" && watch.featured && (
+              <span className="bg-accent-gold text-black text-xs font-semibold px-3 py-1 rounded-full shadow">
+                Collection
+              </span>
+            )}
+            {mode === "product" && watch.featured && (
               <span className="bg-accent-gold text-black text-xs font-semibold px-3 py-1 rounded-full shadow">
                 Nouveauté
               </span>
@@ -85,26 +96,46 @@ export default function ProductCard({ watch }: ProductCardProps) {
                 Rupture
               </span>
             )}
+            {mode === "product" && watch.color && watch.color !== "Main" && (
+              <span className="bg-neutral-100 text-neutral-800 text-xs font-medium px-3 py-1 rounded-full shadow">
+                {watch.color}
+              </span>
+            )}
           </div>
 
           {/* Bouton rapide */}
-          <div
-            className={`absolute inset-x-4 bottom-4 transition-all duration-300 ${
-              isHovered
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-4"
-            }`}
-          >
-            <Button
-              onClick={handleAddToCart}
-              disabled={!watch.inStock}
-              variant="primary"
-              size="sm"
-              className="w-full"
+          {mode === "product" && (
+            <div
+              className={`absolute inset-x-4 bottom-4 transition-all duration-300 ${
+                isHovered
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
             >
-              Ajouter au panier
-            </Button>
-          </div>
+              <Button
+                onClick={handleAddToCart}
+                disabled={!watch.inStock}
+                variant="primary"
+                size="sm"
+                className="w-full"
+              >
+                Ajouter au panier
+              </Button>
+            </div>
+          )}
+
+          {/* Overlay pour mode collection */}
+          {mode === "collection" && (
+            <div
+              className={`absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity duration-300 ${
+                isHovered ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <span className="text-white text-lg font-medium px-6 py-3 bg-accent-gold/90 rounded-lg">
+                Voir la collection
+              </span>
+            </div>
+          )}
         </div>
 
         {/* === Informations produit === */}
@@ -118,16 +149,6 @@ export default function ProductCard({ watch }: ProductCardProps) {
           <p className="text-base sm:text-lg font-semibold mb-auto">
             {formatPrice(watch.price)}
           </p>
-
-          {/* Spécifications courtes */}
-          <div className="mt-4 pt-4 border-t border-neutral-200 text-xs text-neutral-600 space-y-1">
-            {watch.specifications?.movement && (
-              <p className="line-clamp-1">{watch.specifications.movement}</p>
-            )}
-            {watch.specifications?.diameter && (
-              <p className="line-clamp-1">{watch.specifications.diameter}</p>
-            )}
-          </div>
         </div>
       </article>
     </Link>

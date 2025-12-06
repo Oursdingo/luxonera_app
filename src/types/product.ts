@@ -1,24 +1,25 @@
 export interface Watch {
   id: string
-  slug: string
+  slug?: string
   name: string
   brand: string
   collection: string
   price: number
   currency: 'FCFA'
+  color?: string
   images: {
     main: string
-    gallery: string[]
+    gallery?: string[]
     lifestyle?: string[]
   }
   description: string
-  specifications: {
-    movement: string
-    case: string
-    diameter: string
-    waterResistance: string
-    strap: string
-    features: string[]
+  specifications?: {
+    movement?: string
+    case?: string
+    diameter?: string
+    waterResistance?: string
+    strap?: string
+    features?: string[]
   }
   inStock: boolean
   featured: boolean

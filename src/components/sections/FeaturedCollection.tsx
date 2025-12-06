@@ -79,6 +79,7 @@ export default function FeaturedCollection({
 
         <ProductGrid
           watches={watches}
+          mode="collection"
           cardRef={(el, index) => {
             cardsRef.current[index] = el;
           }}
