@@ -117,6 +117,7 @@ export default function WhatsAppCheckout() {
         quantity: item.quantity,
         price: item.price,
         color: item.color,
+        collection: item.collection,
       })),
       total: getTotalPrice(),
       customerName,

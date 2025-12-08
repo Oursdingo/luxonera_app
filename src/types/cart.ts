@@ -20,6 +20,7 @@ export interface CheckoutData {
     quantity: number
     price: number
     color?: string
+    collection?: string
   }>
   total: number
   customerName?: string

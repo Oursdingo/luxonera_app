@@ -36,6 +36,9 @@ export function formatCartForWhatsApp(cart: CheckoutData): string {
 
   cart.items.forEach((item, index) => {
     message += `${index + 1}. ${item.name}\n`;
+    if (item.collection) {
+      message += `   - Collection: ${item.collection}\n`;
+    }
     if (item.color) {
       message += `   - Couleur: ${item.color}\n`;
     }
