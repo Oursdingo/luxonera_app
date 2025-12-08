@@ -1,13 +1,15 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import ProductGrid from '@/components/product/ProductGrid'
 import { watches, getAllCollections } from '@/data/products'
 import { SortOption } from '@/types/product'
 
 export default function CatalogContent() {
   const searchParams = useSearchParams()
+  const router = useRouter()
+  const pathname = usePathname()
   const collectionFromUrl = searchParams.get('collection')
 
   const [selectedCollection, setSelectedCollection] = useState<string>('all')
@@ -16,12 +18,29 @@ export default function CatalogContent() {
 
   const collections = getAllCollections()
 
-  // Pré-sélectionner la collection depuis l'URL
+  // Pré-sélectionner la collection depuis l'URL (une seule fois au montage)
   useEffect(() => {
     if (collectionFromUrl && collections.includes(collectionFromUrl)) {
       setSelectedCollection(collectionFromUrl)
     }
-  }, [collectionFromUrl, collections])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Gérer le changement de collection avec mise à jour de l'URL
+  const handleCollectionChange = (collection: string) => {
+    setSelectedCollection(collection)
+
+    // Mettre à jour l'URL
+    const params = new URLSearchParams(searchParams.toString())
+    if (collection === 'all') {
+      params.delete('collection')
+    } else {
+      params.set('collection', collection)
+    }
+
+    const newUrl = params.toString() ? `${pathname}?${params.toString()}` : pathname
+    router.push(newUrl, { scroll: false })
+  }
 
   const filteredAndSortedWatches = useMemo(() => {
     let filtered = [...watches]
@@ -75,13 +94,28 @@ export default function CatalogContent() {
 
       {/* Filters */}
       <div className="bg-white border border-neutral-200 rounded-lg p-6 mb-12">
+        {/* Message informatif si un filtre de collection est appliqué */}
+        {selectedCollection !== 'all' && (
+          <div className="mb-4 p-3 bg-accent-gold/10 border border-accent-gold/30 rounded-lg flex items-center justify-between">
+            <p className="text-sm text-neutral-700">
+              Filtre actif : <span className="font-semibold">{selectedCollection}</span>
+            </p>
+            <button
+              onClick={() => handleCollectionChange('all')}
+              className="text-sm text-neutral-600 hover:text-black underline transition-colors"
+            >
+              Voir toutes les montres
+            </button>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Collection Filter */}
           <div>
             <label className="block text-sm font-medium mb-2">Collection</label>
             <select
               value={selectedCollection}
-              onChange={(e) => setSelectedCollection(e.target.value)}
+              onChange={(e) => handleCollectionChange(e.target.value)}
               className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:border-black"
             >
               <option value="all">Toutes les collections</option>

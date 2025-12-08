@@ -36,6 +36,9 @@ export function formatCartForWhatsApp(cart: CheckoutData): string {
 
   cart.items.forEach((item, index) => {
     message += `${index + 1}. ${item.name}\n`;
+    if (item.color) {
+      message += `   - Couleur: ${item.color}\n`;
+    }
     message += `   - Quantité: ${item.quantity}\n`;
     message += `   - Prix: ${item.price.toLocaleString("fr-FR")} FCFA\n\n`;
   });

@@ -43,7 +43,9 @@ export default function WhatsAppCheckout() {
     }
   };
 
-  const handleRecipientFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleRecipientFirstNameChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const value = e.target.value;
     setRecipientFirstName(value);
 
@@ -54,7 +56,9 @@ export default function WhatsAppCheckout() {
     }
   };
 
-  const handleRecipientLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleRecipientLastNameChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const value = e.target.value;
     setRecipientLastName(value);
 
@@ -82,16 +86,24 @@ export default function WhatsAppCheckout() {
 
     // Validation pour la livraison à une autre personne
     if (deliverToOther) {
-      if (!recipientFirstName.trim() || !recipientLastName.trim() || !recipientPhone) {
+      if (
+        !recipientFirstName.trim() ||
+        !recipientLastName.trim() ||
+        !recipientPhone
+      ) {
         toast.error("Erreur", {
           description: "Veuillez remplir tous les champs du destinataire",
         });
         return;
       }
 
-      if (!validateName(recipientFirstName) || !validateName(recipientLastName)) {
+      if (
+        !validateName(recipientFirstName) ||
+        !validateName(recipientLastName)
+      ) {
         toast.error("Erreur", {
-          description: "Le nom et prénom du destinataire ne doivent contenir que des lettres",
+          description:
+            "Le nom et prénom du destinataire ne doivent contenir que des lettres",
         });
         return;
       }
@@ -104,16 +116,20 @@ export default function WhatsAppCheckout() {
         name: item.name,
         quantity: item.quantity,
         price: item.price,
+        color: item.color,
       })),
       total: getTotalPrice(),
       customerName,
       customerPhone,
       deliveryMessage: deliveryMessage.trim() || undefined,
-      recipient: deliverToOther && recipientPhone ? {
-        firstName: recipientFirstName,
-        lastName: recipientLastName,
-        phone: recipientPhone,
-      } : undefined,
+      recipient:
+        deliverToOther && recipientPhone
+          ? {
+              firstName: recipientFirstName,
+              lastName: recipientLastName,
+              phone: recipientPhone,
+            }
+          : undefined,
     };
 
     openWhatsAppCheckout(cart);
@@ -229,7 +245,10 @@ export default function WhatsAppCheckout() {
           <div className="mt-4 space-y-4 p-4 bg-white border border-neutral-200 rounded-lg">
             {/* Delivery Message */}
             <div>
-              <label htmlFor="deliveryMessage" className="block text-sm font-medium mb-2">
+              <label
+                htmlFor="deliveryMessage"
+                className="block text-sm font-medium mb-2"
+              >
                 Message pour la livraison (optionnel)
               </label>
               <textarea
@@ -296,13 +315,16 @@ export default function WhatsAppCheckout() {
                 </h4>
 
                 <div>
-                  <label htmlFor="recipientFirstName" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="recipientFirstName"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Prénom du destinataire
                   </label>
                   <input
                     id="recipientFirstName"
                     type="text"
-                    placeholder="Jean"
+                    placeholder="Lionel"
                     value={recipientFirstName}
                     onChange={handleRecipientFirstNameChange}
                     className={`w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors ${
@@ -313,18 +335,23 @@ export default function WhatsAppCheckout() {
                     required
                   />
                   {recipientFirstNameError && (
-                    <p className="mt-1 text-sm text-red-600">{recipientFirstNameError}</p>
+                    <p className="mt-1 text-sm text-red-600">
+                      {recipientFirstNameError}
+                    </p>
                   )}
                 </div>
 
                 <div>
-                  <label htmlFor="recipientLastName" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="recipientLastName"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Nom du destinataire
                   </label>
                   <input
                     id="recipientLastName"
                     type="text"
-                    placeholder="Dupont"
+                    placeholder="Bouda"
                     value={recipientLastName}
                     onChange={handleRecipientLastNameChange}
                     className={`w-full px-4 py-3 border rounded-lg focus:outline-none transition-colors ${
@@ -335,12 +362,17 @@ export default function WhatsAppCheckout() {
                     required
                   />
                   {recipientLastNameError && (
-                    <p className="mt-1 text-sm text-red-600">{recipientLastNameError}</p>
+                    <p className="mt-1 text-sm text-red-600">
+                      {recipientLastNameError}
+                    </p>
                   )}
                 </div>
 
                 <div>
-                  <label htmlFor="recipientPhone" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="recipientPhone"
+                    className="block text-sm font-medium mb-2"
+                  >
                     Numéro de téléphone du destinataire
                   </label>
                   <PhoneInput
