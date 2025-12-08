@@ -83,7 +83,7 @@ export const watches: Watch[] = [
   },
   {
     id: "casio-casio-classique-green",
-    name: "Black œil vert émeraude",
+    name: "Silvert œil vert émeraude",
     brand: "CASIO",
     collection: "Casio Classique",
     price: 10000,
@@ -627,7 +627,7 @@ export const watches: Watch[] = [
   },
   {
     id: "curren-curren-stainless-steel-main",
-    name: "Titan Acier Artistique",
+    name: "Titan Acier Arctique",
     brand: "CURREN",
     collection: "Curren Acier Inoxydable",
     price: 25000,
@@ -659,7 +659,7 @@ export const watches: Watch[] = [
   },
   {
     id: "curren-curren-stainless-steel-silver-blue",
-    name: "Titan Acier Artistique",
+    name: "Titan Acier Arctique",
     brand: "CURREN",
     collection: "Curren Acier Inoxydable",
     price: 25000,
@@ -675,7 +675,7 @@ export const watches: Watch[] = [
   },
   {
     id: "curren-curren-stainless-steel-silver-dark-blue",
-    name: "Titan Acier Artistique",
+    name: "Titan Acier Arctique",
     brand: "CURREN",
     collection: "Curren Acier Inoxydable",
     price: 25000,
@@ -742,7 +742,7 @@ export const watches: Watch[] = [
     name: "Black Gold",
     brand: "DANIEL_WELLINGTON",
     collection: "Daniel Wellington Classique",
-    price: 28000,
+    price: 12000,
     currency: "FCFA",
     color: "Cuir Noir",
     images: {
