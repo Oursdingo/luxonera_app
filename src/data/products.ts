@@ -566,7 +566,7 @@ export const watches: Watch[] = [
     name: "Ombre Acier",
     brand: "CURREN",
     collection: "Curren Classique",
-    price: 18000,
+    price: 15000,
     currency: "FCFA",
     color: "Argent Noir",
     images: {
@@ -710,7 +710,7 @@ export const watches: Watch[] = [
     name: "Brun Silver Chronographe",
     brand: "DANIEL_WELLINGTON",
     collection: "Daniel Wellington Chronographe",
-    price: 33000,
+    price: 30000,
     currency: "FCFA",
     color: "Cuir Blanc",
     images: {
@@ -934,7 +934,7 @@ export const watches: Watch[] = [
     name: "Silver black",
     brand: "POEDEGAR",
     collection: "Poedegar Classique",
-    price: 30000,
+    price: 15000,
     currency: "FCFA",
     color: "Argent Noir",
     images: {
@@ -1030,7 +1030,7 @@ export const watches: Watch[] = [
     name: "Brown Leather",
     brand: "TOMY",
     collection: "Tomy Bracelet Cuir",
-    price: 19000,
+    price: 30000,
     currency: "FCFA",
     color: "Cuir Marron",
     images: {
