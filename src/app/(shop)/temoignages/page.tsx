@@ -66,7 +66,7 @@ export default function TestimonialsPage() {
             </div>
 
             <h1 className="hero-animate font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 sm:mb-6 text-balance leading-tight">
-              Ce Qu'Ils Disent <br className="hidden sm:block" />
+              Ce Qu&apos;Ils Disent <br className="hidden sm:block" />
               <span className="sm:inline"> </span><span className="text-accent-gold">De Nous</span>
             </h1>
 
@@ -148,7 +148,7 @@ export default function TestimonialsPage() {
                 Rejoignez Nos Clients <span className="text-accent-gold">Satisfaits</span>
               </h3>
               <p className="text-neutral-300 mb-6 sm:mb-8 text-base sm:text-lg">
-                Vous aussi, vivez l'expérience LUXONÉRA et partagez votre témoignage
+                Vous aussi, vivez l&apos;expérience LUXONÉRA et partagez votre témoignage
               </p>
               <a
                 href="/catalog"

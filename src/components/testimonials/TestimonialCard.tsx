@@ -68,7 +68,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         {renderStars()}
 
         <p className="text-neutral-800 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-          "{testimonial.text}"
+          &ldquo;{testimonial.text}&rdquo;
         </p>
 
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-neutral-200">
