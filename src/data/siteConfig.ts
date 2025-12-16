@@ -8,6 +8,7 @@ export const siteConfig = {
   navigation: [
     { name: "Accueil", href: "/" },
     { name: "Catalogue", href: "/catalog" },
+    { name: "Témoignages", href: "/temoignages" },
     { name: "À Propos", href: "/about" },
     { name: "Panier", href: "/cart" },
   ],

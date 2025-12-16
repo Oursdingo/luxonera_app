@@ -1,0 +1,81 @@
+<svg width="360" height="640" viewBox="0 0 360 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- WhatsApp background -->
+  <rect width="360" height="640" fill="#0B141A"/>
+
+  <!-- Chat wallpaper pattern -->
+  <defs>
+    <pattern id="chatPattern2" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.5" fill="#182229" opacity="0.3"/>
+      <circle cx="30" cy="30" r="0.5" fill="#182229" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="360" height="640" fill="url(#chatPattern2)"/>
+
+  <!-- Header -->
+  <rect width="360" height="60" fill="#1F2C34"/>
+  <path d="M 20 30 L 30 25 L 30 35 Z" fill="#8696A0"/>
+  <circle cx="60" cy="30" r="18" fill="#D4AF37"/>
+  <text x="60" y="36" font-family="Arial, sans-serif" font-size="14" fill="#0B141A" text-anchor="middle" font-weight="bold">L</text>
+  <text x="90" y="28" font-family="Arial, sans-serif" font-size="16" fill="#E9EDEF" font-weight="bold">LUXONÉRA</text>
+  <text x="90" y="44" font-family="Arial, sans-serif" font-size="12" fill="#8696A0">en ligne</text>
+
+  <!-- Messages about delivery confirmation -->
+  <rect x="10" y="80" width="260" height="70" rx="8" fill="#1F2C34"/>
+  <text x="20" y="100" font-family="Arial, sans-serif" font-size="14" fill="#E9EDEF">
+    <tspan x="20" dy="0">Salut ! J'ai bien reçu ma</tspan>
+    <tspan x="20" dy="18">montre Sport Elite 😍</tspan>
+    <tspan x="20" dy="18">Elle est encore plus belle !</tspan>
+  </text>
+  <text x="260" y="145" font-family="Arial, sans-serif" font-size="11" fill="#8696A0">16:42</text>
+
+  <rect x="90" y="165" width="260" height="68" rx="8" fill="#005C4B"/>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="14" fill="#E9EDEF">
+    <tspan x="100" dy="0">Merci pour votre confiance ! 🙏</tspan>
+    <tspan x="100" dy="18">Ravi que vous soyez satisfait</tspan>
+    <tspan x="100" dy="18">N'hésitez pas à nous taguer 📸</tspan>
+  </text>
+  <text x="340" y="228" font-family="Arial, sans-serif" font-size="11" fill="#8696A0">16:43</text>
+  <path d="M 345 226 L 350 229 L 345 232" fill="none" stroke="#53BDEB" stroke-width="1.5"/>
+
+  <!-- Client sending photo -->
+  <rect x="10" y="248" width="240" height="140" rx="8" fill="#1F2C34"/>
+  <text x="20" y="268" font-family="Arial, sans-serif" font-size="14" fill="#E9EDEF">
+    <tspan x="20" dy="0">Voici une photo ! 📷</tspan>
+  </text>
+
+  <!-- Photo placeholder -->
+  <rect x="20" y="280" width="100" height="80" rx="4" fill="#0B141A"/>
+  <circle cx="70" cy="320" r="20" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="70" cy="320" r="12" fill="#D4AF37"/>
+  <text x="130" y="315" font-family="Arial, sans-serif" font-size="13" fill="#E9EDEF">
+    <tspan x="130" dy="0">La qualité est top !</tspan>
+    <tspan x="130" dy="18">Service impeccable 👌</tspan>
+  </text>
+  <text x="240" y="383" font-family="Arial, sans-serif" font-size="11" fill="#8696A0">16:45</text>
+
+  <!-- LUXONÉRA response -->
+  <rect x="100" y="403" width="250" height="85" rx="8" fill="#005C4B"/>
+  <text x="110" y="423" font-family="Arial, sans-serif" font-size="14" fill="#E9EDEF">
+    <tspan x="110" dy="0">Magnifique ! 🌟</tspan>
+    <tspan x="110" dy="18">Merci pour cette belle photo</tspan>
+    <tspan x="110" dy="18">À très bientôt pour votre</tspan>
+    <tspan x="110" dy="18">prochaine montre 😊</tspan>
+  </text>
+  <text x="340" y="483" font-family="Arial, sans-serif" font-size="11" fill="#8696A0">16:46</text>
+  <path d="M 345 481 L 350 484 L 345 487" fill="none" stroke="#53BDEB" stroke-width="1.5"/>
+
+  <!-- Client final message -->
+  <rect x="10" y="503" width="200" height="52" rx="8" fill="#1F2C34"/>
+  <text x="20" y="523" font-family="Arial, sans-serif" font-size="14" fill="#E9EDEF">
+    <tspan x="20" dy="0">Compte sur moi ! 💯</tspan>
+    <tspan x="20" dy="18">Je recommande à tous ⭐⭐⭐⭐⭐</tspan>
+  </text>
+  <text x="200" y="550" font-family="Arial, sans-serif" font-size="11" fill="#8696A0">16:47</text>
+
+  <!-- Input bar -->
+  <rect y="600" width="360" height="40" fill="#1F2C34"/>
+  <rect x="10" y="608" width="280" height="24" rx="12" fill="#2A3942"/>
+  <text x="20" y="624" font-family="Arial, sans-serif" font-size="14" fill="#8696A0">Message</text>
+  <circle cx="325" cy="620" r="12" fill="#00A884"/>
+  <path d="M 320 620 L 325 623 L 330 618" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
