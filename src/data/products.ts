@@ -19,14 +19,46 @@ export const watches: Watch[] = [
   },
   {
     id: "aura-aura-arabic-numerals-black",
-    name: "Aura Chiffres Arabes",
+    name: "Aura all black chiffres Arabes",
     brand: "AURA",
     collection: "Aura Chiffres Arabes",
     price: 10000,
     currency: "FCFA",
     color: "Noir",
     images: {
-      main: "/images/watches/aura/aura_arabic_numerals/black/aura_arabic_numerals-1.jpg",
+      main: "/images/watches/aura/aura_arabic_numerals/black/black.png",
+    },
+    description:
+      "Montre masculine élégante avec chiffres arabes distinctifs. Cette montre Aura se distingue par son cadran noir mat sophistiqué orné de chiffres arabes bien lisibles. Son design contemporain et épuré en fait un accessoire moderne et raffiné. Parfaite pour celui qui recherche une montre unique alliant lisibilité et style affirmé.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "aura-aura-arabic-numerals-red",
+    name: "Aura Œil Pourpre chiffres Arabes",
+    brand: "AURA",
+    collection: "Aura Chiffres Arabes",
+    price: 10000,
+    currency: "FCFA",
+    color: "Noir Rouge",
+    images: {
+      main: "/images/watches/aura/aura_arabic_numerals/red_black/red.png",
+    },
+    description:
+      "Montre masculine élégante avec chiffres arabes distinctifs. Cette montre Aura se distingue par son cadran noir mat sophistiqué orné de chiffres arabes bien lisibles. Son design contemporain et épuré en fait un accessoire moderne et raffiné. Parfaite pour celui qui recherche une montre unique alliant lisibilité et style affirmé.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "aura-aura-arabic-numerals-blue",
+    name: "Aura Œil Globe chiffres Arabes",
+    brand: "AURA",
+    collection: "Aura Chiffres Arabes",
+    price: 10000,
+    currency: "FCFA",
+    color: "Noir Bleue",
+    images: {
+      main: "/images/watches/aura/aura_arabic_numerals/black_blue/blue.png",
     },
     description:
       "Montre masculine élégante avec chiffres arabes distinctifs. Cette montre Aura se distingue par son cadran noir mat sophistiqué orné de chiffres arabes bien lisibles. Son design contemporain et épuré en fait un accessoire moderne et raffiné. Parfaite pour celui qui recherche une montre unique alliant lisibilité et style affirmé.",
@@ -56,9 +88,25 @@ export const watches: Watch[] = [
     collection: "Casio Classique",
     price: 10000,
     currency: "FCFA",
-    color: "Noir",
+    color: "Argent Noir",
     images: {
       main: "/images/watches/casio/casio_classique/black/casio_classique-2.jpg",
+    },
+    description:
+      "Cette montre CASIO se distingue par son design moderne et épuré. Son boîtier rectangulaire et son bracelet en acier apportent une allure élégante, parfaite pour un usage quotidien ou professionnel.Fiable et précise grâce à son mouvement quartz, elle offre une lecture claire du temps avec un affichage de la date parfaitement intégré. Discrète, confortable et intemporelle, cette montre devient rapidement un indispensable pour ceux qui apprécient les détails soignés et la simplicité raffinée.",
+    inStock: false,
+    featured: false,
+  },
+  {
+    id: "casio-casio-classique-silver-black",
+    name: "Silver œil sombre",
+    brand: "CASIO",
+    collection: "Casio Classique",
+    price: 10000,
+    currency: "FCFA",
+    color: "Argent Noir",
+    images: {
+      main: "/images/watches/casio/casio_classique/silver_black/silver_black.png",
     },
     description:
       "Cette montre CASIO se distingue par son design moderne et épuré. Son boîtier rectangulaire et son bracelet en acier apportent une allure élégante, parfaite pour un usage quotidien ou professionnel.Fiable et précise grâce à son mouvement quartz, elle offre une lecture claire du temps avec un affichage de la date parfaitement intégré. Discrète, confortable et intemporelle, cette montre devient rapidement un indispensable pour ceux qui apprécient les détails soignés et la simplicité raffinée.",
@@ -110,7 +158,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre Casio au style intemporel et fonctionnel. Avec son design rectangulaire caractéristique et son affichage digital clair, elle incarne l'héritage de Casio depuis les années 80. Robuste et fiable, cette montre offre des fonctions essentielles comme le chronomètre, l'alarme et l'éclairage LED. Parfaite pour un usage quotidien avec son excellent rapport qualité-prix.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -243,7 +291,7 @@ export const watches: Watch[] = [
   },
   {
     id: "casio-casio-wr-main",
-    name: "Superman",
+    name: "Silver œil pourpre",
     brand: "CASIO",
     collection: "Casio Water Resistant",
     price: 10000,
@@ -254,12 +302,12 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: true,
+    inStock: false,
     featured: true,
   },
   {
     id: "casio-casio-wr-silver-black",
-    name: "Batman",
+    name: "Silver Oeil Sombre",
     brand: "CASIO",
     collection: "Casio Water Resistant",
     price: 10000,
@@ -291,7 +339,7 @@ export const watches: Watch[] = [
   },
   {
     id: "casio-casio-wr-silver-pink",
-    name: "Mia Khalifa",
+    name: "Silver pink",
     brand: "CASIO",
     collection: "Casio Water Resistant",
     price: 10000,
@@ -302,7 +350,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -318,7 +366,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -363,6 +411,7 @@ export const watches: Watch[] = [
     color: "Or Vert",
     images: {
       main: "/images/watches/curren/Curren_blanche/gold_green/casio_classique-2.jpg",
+      gallery: ["/images/watches/curren/Curren_blanche/coffret/coffret.png"],
     },
     description:
       "Élégance raffinée avec cadran blanc et finitions luxueuses. Cette montre Curren combine style business et sophistication avec son design épuré. Le cadran blanc lumineux contraste magnifiquement avec le boîtier métallique, créant un look intemporel. Équipée d'un mouvement quartz précis et d'un bracelet confortable, elle est parfaite pour les occasions formelles comme décontractées.",
@@ -379,6 +428,7 @@ export const watches: Watch[] = [
     color: "Argent Bleu",
     images: {
       main: "/images/watches/curren/Curren_blanche/silver_blue/curren_blanche-main.jpg",
+      gallery: ["/images/watches/curren/Curren_blanche/coffret/coffret.png"],
     },
     description:
       "Élégance raffinée avec cadran blanc et finitions luxueuses. Cette montre Curren combine style business et sophistication avec son design épuré. Le cadran blanc lumineux contraste magnifiquement avec le boîtier métallique, créant un look intemporel. Équipée d'un mouvement quartz précis et d'un bracelet confortable, elle est parfaite pour les occasions formelles comme décontractées.",
@@ -395,6 +445,7 @@ export const watches: Watch[] = [
     color: "Argent Vert",
     images: {
       main: "/images/watches/curren/Curren_blanche/silver_green/casio_classique-3.jpg",
+      gallery: ["/images/watches/curren/Curren_blanche/coffret/coffret.png"],
     },
     description:
       "Élégance raffinée avec cadran blanc et finitions luxueuses. Cette montre Curren combine style business et sophistication avec son design épuré. Le cadran blanc lumineux contraste magnifiquement avec le boîtier métallique, créant un look intemporel. Équipée d'un mouvement quartz précis et d'un bracelet confortable, elle est parfaite pour les occasions formelles comme décontractées.",
@@ -411,6 +462,24 @@ export const watches: Watch[] = [
     color: "Argent Rose",
     images: {
       main: "/images/watches/curren/Curren_blanche/silver_pink/curren_blanche-1.jpg",
+      gallery: ["/images/watches/curren/Curren_blanche/coffret/coffret.png"],
+    },
+    description:
+      "Élégance raffinée avec cadran blanc et finitions luxueuses. Cette montre Curren combine style business et sophistication avec son design épuré. Le cadran blanc lumineux contraste magnifiquement avec le boîtier métallique, créant un look intemporel. Équipée d'un mouvement quartz précis et d'un bracelet confortable, elle est parfaite pour les occasions formelles comme décontractées.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "curren-curren-blanche-gold-pink",
+    name: "Rose Somon",
+    brand: "CURREN",
+    collection: "Curren Blanche",
+    price: 20000,
+    currency: "FCFA",
+    color: "Or Rose",
+    images: {
+      main: "/images/watches/curren/Curren_blanche/gold_pink/pink.png",
+      gallery: ["/images/watches/curren/Curren_blanche/coffret/coffret.png"],
     },
     description:
       "Élégance raffinée avec cadran blanc et finitions luxueuses. Cette montre Curren combine style business et sophistication avec son design épuré. Le cadran blanc lumineux contraste magnifiquement avec le boîtier métallique, créant un look intemporel. Équipée d'un mouvement quartz précis et d'un bracelet confortable, elle est parfaite pour les occasions formelles comme décontractées.",
@@ -478,7 +547,7 @@ export const watches: Watch[] = [
     },
     description:
       "Version ultra-fine au design minimaliste et moderne. Cette montre slim profile offre une élégance discrète avec son boîtier extra-plat. Son cadran blanc épuré et ses index raffinés en font l'accessoire idéal pour un style sophistiqué. Légère et confortable, elle se glisse facilement sous une chemise pour un look professionnel impeccable.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -539,6 +608,7 @@ export const watches: Watch[] = [
     color: "Main",
     images: {
       main: "/images/watches/curren/curren_classique/main/curren_classique-main.jpg",
+      gallery: ["/images/watches/curren/Curren_blanche/coffret/coffret.png"],
     },
     description:
       "Design classique intemporel pour homme moderne et raffiné. Cette montre Curren Classique incarne l'équilibre parfait entre tradition horlogère et modernité. Son cadran sobre, ses index élégants et son bracelet en acier inoxydable en font un choix versatile pour toutes occasions. Qualité et style à prix accessible.",
@@ -555,6 +625,7 @@ export const watches: Watch[] = [
     color: "Noir",
     images: {
       main: "/images/watches/curren/curren_classique/black/curren_classique-main.jpg",
+      gallery: ["/images/watches/curren/curren_classique/coffret/coffret.png"],
     },
     description:
       "Design classique intemporel pour homme moderne et raffiné. Cette montre Curren Classique incarne l'équilibre parfait entre tradition horlogère et modernité. Son cadran sobre, ses index élégants et son bracelet en acier inoxydable en font un choix versatile pour toutes occasions. Qualité et style à prix accessible.",
@@ -571,6 +642,41 @@ export const watches: Watch[] = [
     color: "Argent Noir",
     images: {
       main: "/images/watches/curren/curren_classique/silver_black/curren_classique-1.jpg",
+      gallery: ["/images/watches/curren/curren_classique/coffret/coffret.png"],
+    },
+    description:
+      "Design classique intemporel pour homme moderne et raffiné. Cette montre Curren Classique incarne l'équilibre parfait entre tradition horlogère et modernité. Son cadran sobre, ses index élégants et son bracelet en acier inoxydable en font un choix versatile pour toutes occasions. Qualité et style à prix accessible.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "curren-curren-classique-silver-black_2",
+    name: "Curren sphérique œil sombre",
+    brand: "CURREN",
+    collection: "Curren Classique",
+    price: 15000,
+    currency: "FCFA",
+    color: "Argent Noir",
+    images: {
+      main: "/images/watches/curren/curren_classique/silver_black_2/silver_black_2.png",
+      gallery: ["/images/watches/curren/curren_classique/coffret/coffret.png"],
+    },
+    description:
+      "Design classique intemporel pour homme moderne et raffiné. Cette montre Curren Classique incarne l'équilibre parfait entre tradition horlogère et modernité. Son cadran sobre, ses index élégants et son bracelet en acier inoxydable en font un choix versatile pour toutes occasions. Qualité et style à prix accessible.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "curren-curren-classique-silver-blue-2",
+    name: "Curren sphérique œil océan",
+    brand: "CURREN",
+    collection: "Curren Classique",
+    price: 15000,
+    currency: "FCFA",
+    color: "Argent Bleue",
+    images: {
+      main: "/images/watches/curren/curren_classique/silver_blue_2/silver_blue_2.png",
+      gallery: ["/images/watches/curren/curren_classique/coffret/coffret.png"],
     },
     description:
       "Design classique intemporel pour homme moderne et raffiné. Cette montre Curren Classique incarne l'équilibre parfait entre tradition horlogère et modernité. Son cadran sobre, ses index élégants et son bracelet en acier inoxydable en font un choix versatile pour toutes occasions. Qualité et style à prix accessible.",
@@ -587,6 +693,7 @@ export const watches: Watch[] = [
     color: "Argent Bleu",
     images: {
       main: "/images/watches/curren/curren_classique/silver_blue/curren_classique-2.jpg",
+      gallery: ["/images/watches/curren/curren_classique/coffret/coffret.png"],
     },
     description:
       "Design classique intemporel pour homme moderne et raffiné. Cette montre Curren Classique incarne l'équilibre parfait entre tradition horlogère et modernité. Son cadran sobre, ses index élégants et son bracelet en acier inoxydable en font un choix versatile pour toutes occasions. Qualité et style à prix accessible.",
@@ -635,6 +742,9 @@ export const watches: Watch[] = [
     color: "Main",
     images: {
       main: "/images/watches/curren/curren_stainless_steel/main/curren_stainless_steel-main.jpg",
+      gallery: [
+        "/images/watches/curren/curren_stainless_steel/coffret/coffret.png",
+      ],
     },
     description:
       "Construction robuste en acier inoxydable pour une durabilité exceptionnelle. Cette montre tout acier offre une solidité à toute épreuve avec son boîtier et son bracelet en acier inoxydable de haute qualité. Son design masculin et sportif s'accompagne d'une finition soignée. Résistante et élégante, elle traverse le temps avec panache.",
@@ -651,6 +761,9 @@ export const watches: Watch[] = [
     color: "Noir",
     images: {
       main: "/images/watches/curren/curren_stainless_steel/black/curren_stainless_steel-1.jpg",
+      gallery: [
+        "/images/watches/curren/curren_stainless_steel/coffret/coffret.png",
+      ],
     },
     description:
       "Construction robuste en acier inoxydable pour une durabilité exceptionnelle. Cette montre tout acier offre une solidité à toute épreuve avec son boîtier et son bracelet en acier inoxydable de haute qualité. Son design masculin et sportif s'accompagne d'une finition soignée. Résistante et élégante, elle traverse le temps avec panache.",
@@ -667,6 +780,9 @@ export const watches: Watch[] = [
     color: "Argent Bleu",
     images: {
       main: "/images/watches/curren/curren_stainless_steel/silver_blue/curren_stainless_steel-2.jpg",
+      gallery: [
+        "/images/watches/curren/curren_stainless_steel/coffret/coffret.png",
+      ],
     },
     description:
       "Construction robuste en acier inoxydable pour une durabilité exceptionnelle. Cette montre tout acier offre une solidité à toute épreuve avec son boîtier et son bracelet en acier inoxydable de haute qualité. Son design masculin et sportif s'accompagne d'une finition soignée. Résistante et élégante, elle traverse le temps avec panache.",
@@ -683,6 +799,9 @@ export const watches: Watch[] = [
     color: "Argent Bleu Foncé",
     images: {
       main: "/images/watches/curren/curren_stainless_steel/silver_dark_blue/curren_stainless_steel-main.jpg",
+      gallery: [
+        "/images/watches/curren/curren_stainless_steel/coffret/coffret.png",
+      ],
     },
     description:
       "Construction robuste en acier inoxydable pour une durabilité exceptionnelle. Cette montre tout acier offre une solidité à toute épreuve avec son boîtier et son bracelet en acier inoxydable de haute qualité. Son design masculin et sportif s'accompagne d'une finition soignée. Résistante et élégante, elle traverse le temps avec panache.",
@@ -699,6 +818,9 @@ export const watches: Watch[] = [
     color: "Main",
     images: {
       main: "/images/watches/daniel_wellington/daniel_wellington_chronographe/main/daniel_wellington_chronographe-main.jpg",
+      gallery: [
+        "/images/watches/daniel_wellington/daniel_wellington_chronographe/coffret/coffret.png",
+      ],
     },
     description:
       "Minimalisme scandinave avec fonctions chronographe élégantes. Inspirée par le design nordique épuré, cette montre DW Chronographe allie simplicité et fonctionnalité. Son cadran blanc immaculé, ses sous-cadrans discrets et son bracelet en cuir de qualité créent une harmonie parfaite. L'essence du style scandinave intemporel à votre poignet.",
@@ -706,7 +828,7 @@ export const watches: Watch[] = [
     featured: true,
   },
   {
-    id: "daniel_wellington-daniel-wellington-chronographe-leather-white",
+    id: "daniel_wellington-daniel-wellington-chronographe-silver-white",
     name: "Brun Silver Chronographe",
     brand: "DANIEL_WELLINGTON",
     collection: "Daniel Wellington Chronographe",
@@ -715,6 +837,28 @@ export const watches: Watch[] = [
     color: "Cuir Blanc",
     images: {
       main: "/images/watches/daniel_wellington/daniel_wellington_chronographe/leather_white/daniel_wellington_chronographe-main.jpg",
+      gallery: [
+        "/images/watches/daniel_wellington/daniel_wellington_chronographe/coffret/coffret.png",
+      ],
+    },
+    description:
+      "Minimalisme scandinave avec fonctions chronographe élégantes. Inspirée par le design nordique épuré, cette montre DW Chronographe allie simplicité et fonctionnalité. Son cadran blanc immaculé, ses sous-cadrans discrets et son bracelet en cuir de qualité créent une harmonie parfaite. L'essence du style scandinave intemporel à votre poignet.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "daniel_wellington-daniel-wellington-chronographe-gold-white",
+    name: "Black Gold Chronographe",
+    brand: "DANIEL_WELLINGTON",
+    collection: "Daniel Wellington Chronographe",
+    price: 30000,
+    currency: "FCFA",
+    color: "Cuir Or",
+    images: {
+      main: "/images/watches/daniel_wellington/daniel_wellington_chronographe/leather_gold/gold.png",
+      gallery: [
+        "/images/watches/daniel_wellington/daniel_wellington_chronographe/coffret/coffret.png",
+      ],
     },
     description:
       "Minimalisme scandinave avec fonctions chronographe élégantes. Inspirée par le design nordique épuré, cette montre DW Chronographe allie simplicité et fonctionnalité. Son cadran blanc immaculé, ses sous-cadrans discrets et son bracelet en cuir de qualité créent une harmonie parfaite. L'essence du style scandinave intemporel à votre poignet.",
@@ -866,6 +1010,108 @@ export const watches: Watch[] = [
     featured: false,
   },
   {
+    id: "hugo-boss-chronographe-main",
+    name: "Silver Black",
+    brand: "HUGO BOSS",
+    collection: "Hugo Boss Chronographe",
+    price: 50000,
+    currency: "FCFA",
+    color: "Main",
+    images: {
+      main: "/images/watches/hugo_boss/boss_chronographe/main/silver_black.png",
+      gallery: [
+        "/images/watches/hugo_boss/boss_chronographe/coffret/coffret.png",
+      ],
+    },
+    description:
+      "Horlogerie contemporaine incarnant l'élégance moderne et le raffinement urbain. Hugo Boss exprime son savoir-faire à travers des montres au design épuré, alliant précision, fonctionnalité et style intemporel. Ce chronographe reflète l'excellence de la marque avec son mouvement fiable, ses lignes sophistiquées et ses finitions soignées. Un accessoire de caractère, symbole de performance, de modernité et de distinction.",
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: "hugo-boss-chronographe-all-silver",
+    name: "Silver Black",
+    brand: "HUGO BOSS",
+    collection: "Hugo Boss Chronographe",
+    price: 50000,
+    currency: "FCFA",
+    color: "Argent Noir",
+    images: {
+      main: "/images/watches/hugo_boss/boss_chronographe/silver_black/silver_black.png",
+      gallery: [
+        "/images/watches/hugo_boss/boss_chronographe/coffret/coffret.png",
+      ],
+    },
+    description:
+      "Horlogerie contemporaine incarnant l'élégance moderne et le raffinement urbain. Hugo Boss exprime son savoir-faire à travers des montres au design épuré, alliant précision, fonctionnalité et style intemporel. Ce chronographe reflète l'excellence de la marque avec son mouvement fiable, ses lignes sophistiquées et ses finitions soignées. Un accessoire de caractère, symbole de performance, de modernité et de distinction.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "omega-omega-mecanique-main",
+    name: "Oeil Océan",
+    brand: "OMEGA",
+    collection: "Omega Mecanique",
+    price: 20000,
+    currency: "FCFA",
+    color: "Main",
+    images: {
+      main: "/images/watches/omega/omega_mecanique/main/main.png",
+    },
+    description:
+      "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: "omega-omega-mecanique-oeil-ocean",
+    name: "Oeil Océan",
+    brand: "OMEGA",
+    collection: "Omega Mecanique",
+    price: 20000,
+    currency: "FCFA",
+    color: "Argent Bleue",
+    images: {
+      main: "/images/watches/omega/omega_mecanique/ocean/ocean.png",
+    },
+    description:
+      "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "omega-omega-mecanique-all-silver",
+    name: "All Silver",
+    brand: "OMEGA",
+    collection: "Omega Mecanique",
+    price: 20000,
+    currency: "FCFA",
+    color: "Argent Blanc",
+    images: {
+      main: "/images/watches/omega/omega_mecanique/all_silver/all_silver.png",
+    },
+    description:
+      "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "omega-omega-mecanique-all-silver-etoile",
+    name: "All Silver Etoile",
+    brand: "OMEGA",
+    collection: "Omega Mecanique",
+    price: 20000,
+    currency: "FCFA",
+    color: "Argent Blanc",
+    images: {
+      main: "/images/watches/omega/omega_mecanique/silver_blue/silver_blue.png",
+    },
+    description:
+      "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
+    inStock: true,
+    featured: false,
+  },
+  {
     id: "poedegar-poedega-chronographe-main",
     name: "Acier Profond",
     brand: "POEDEGAR",
@@ -898,6 +1144,22 @@ export const watches: Watch[] = [
     featured: false,
   },
   {
+    id: "poedegar-poedega-chronographe-silver-white",
+    name: "Acier Profond",
+    brand: "POEDEGAR",
+    collection: "Poedegar Chronographe",
+    price: 20000,
+    currency: "FCFA",
+    color: "Argent",
+    images: {
+      main: "/images/watches/poedegar/poedega_chronographe/all_silver/silver.png",
+    },
+    description:
+      "Design élégant alliant classe business et sportivité moderne. Cette montre Poedegar Chronographe offre un cadran surdimensionné lumineux avec des fonctions chronographes pratiques. Son boîtier en acier inoxydable et son bracelet métallique assurent durabilité et confort. Un excellent rapport qualité-prix pour un style professionnel affirmé.",
+    inStock: true,
+    featured: false,
+  },
+  {
     id: "poedegar-poedega-chronographe-silver-blue",
     name: "Acier Arctique",
     brand: "POEDEGAR",
@@ -907,6 +1169,22 @@ export const watches: Watch[] = [
     color: "Argent Bleu",
     images: {
       main: "/images/watches/poedegar/poedega_chronographe/silver_blue/poedega_chronographe-main.jpg",
+    },
+    description:
+      "Design élégant alliant classe business et sportivité moderne. Cette montre Poedegar Chronographe offre un cadran surdimensionné lumineux avec des fonctions chronographes pratiques. Son boîtier en acier inoxydable et son bracelet métallique assurent durabilité et confort. Un excellent rapport qualité-prix pour un style professionnel affirmé.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "poedegar-poedega-chronographe-leather-white",
+    name: "Leather wHITE",
+    brand: "POEDEGAR",
+    collection: "Poedegar Chronographe",
+    price: 18000,
+    currency: "FCFA",
+    color: "Noir Blanc",
+    images: {
+      main: "/images/watches/poedegar/poedega_chronographe/leather_white/white.png",
     },
     description:
       "Design élégant alliant classe business et sportivité moderne. Cette montre Poedegar Chronographe offre un cadran surdimensionné lumineux avec des fonctions chronographes pratiques. Son boîtier en acier inoxydable et son bracelet métallique assurent durabilité et confort. Un excellent rapport qualité-prix pour un style professionnel affirmé.",
@@ -942,6 +1220,40 @@ export const watches: Watch[] = [
     },
     description:
       "Élégance simple et intemporelle pour usage quotidien raffiné. Le modèle Classique de Poedegar séduit par son design sobre et son excellente finition. Avec son mouvement quartz fiable et son boîtier en acier élégant, cette montre offre style et performance à prix accessible. Parfaite pour compléter une tenue business ou casual chic.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "rolex-rolex-mecanique-acier-silver-black-main",
+    name: "Rolex Oyster Perpetual",
+    brand: "ROLEX",
+    collection: "Rolex Mecanique",
+    price: 30000,
+    currency: "FCFA",
+    color: "Main",
+    images: {
+      main: "/images/watches/rolex/rolex_mecanique/main/main.png",
+      gallery: ["/images/watches/rolex/rolex_mecanique/coffret/coffret.png"],
+    },
+    description:
+      "Symbole intemporel de l'excellence horlogère suisse, Rolex incarne la précision, la fiabilité et le prestige absolu. Chaque montre mécanique est le fruit d'un savoir-faire d'exception, associant un mouvement automatique de haute précision à une conception rigoureusement maîtrisée. Son design iconique, à la fois élégant et robuste, reflète une quête permanente de perfection. Véritable référence de l'horlogerie de luxe, une Rolex mécanique est bien plus qu'une montre : c'est un héritage, un gage de performance et un signe distinctif de réussite.",
+    inStock: true,
+    featured: true,
+  },
+  {
+    id: "rolex-rolex-mecanique-acier-silver-black",
+    name: "Rolex Oyster Perpetual",
+    brand: "ROLEX",
+    collection: "Rolex Mecanique",
+    price: 30000,
+    currency: "FCFA",
+    color: "Argent Noir",
+    images: {
+      main: "/images/watches/rolex/rolex_mecanique/silver_black/silver_black.png",
+      gallery: ["/images/watches/rolex/rolex_mecanique/coffret/coffret.png"],
+    },
+    description:
+      "Symbole intemporel de l'excellence horlogère suisse, Rolex incarne la précision, la fiabilité et le prestige absolu. Chaque montre mécanique est le fruit d'un savoir-faire d'exception, associant un mouvement automatique de haute précision à une conception rigoureusement maîtrisée. Son design iconique, à la fois élégant et robuste, reflète une quête permanente de perfection. Véritable référence de l'horlogerie de luxe, une Rolex mécanique est bien plus qu'une montre : c'est un héritage, un gage de performance et un signe distinctif de réussite.",
     inStock: true,
     featured: false,
   },
@@ -987,6 +1299,28 @@ export const watches: Watch[] = [
     color: "Argent Blanc",
     images: {
       main: "/images/watches/tomy/tomy_bras_acier/silver_white/tomy_bras_acier-1.jpg",
+      gallery: [
+        "/images/watches/tomy/tomy_bras_acier/main/tomy_bras_acier-main.jpg",
+      ],
+    },
+    description:
+      "Montre robuste avec bracelet en acier inoxydable de qualité. Cette montre Tomy allie solidité et élégance avec son bracelet métallique confortable et son boîtier résistant. Son design moderne et ses finitions soignées en font un choix fiable pour un usage quotidien. Style masculin affirmé et construction durable.",
+    inStock: true,
+    featured: false,
+  },
+  {
+    id: "tomy-tomy-bras-acier-silver-black",
+    name: "All black",
+    brand: "TOMY",
+    collection: "Tomy Bracelet Acier",
+    price: 30000,
+    currency: "FCFA",
+    color: "Argent Noir",
+    images: {
+      main: "/images/watches/tomy/tomy_bras_acier/silver_black/silver_black.png",
+      gallery: [
+        "/images/watches/tomy/tomy_bras_acier/silver_black/coffret.png",
+      ],
     },
     description:
       "Montre robuste avec bracelet en acier inoxydable de qualité. Cette montre Tomy allie solidité et élégance avec son bracelet métallique confortable et son boîtier résistant. Son design moderne et ses finitions soignées en font un choix fiable pour un usage quotidien. Style masculin affirmé et construction durable.",

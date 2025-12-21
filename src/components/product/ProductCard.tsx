@@ -13,7 +13,10 @@ interface ProductCardProps {
   mode?: "collection" | "product"; // collection = accueil, product = catalogue/détail
 }
 
-export default function ProductCard({ watch, mode = "product" }: ProductCardProps) {
+export default function ProductCard({
+  watch,
+  mode = "product",
+}: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [imageError, setImageError] = useState(false);
   const addItem = useCartStore((state) => state.addItem);
@@ -33,9 +36,10 @@ export default function ProductCard({ watch, mode = "product" }: ProductCardProp
   const hoverImage = watch.images?.gallery?.[0] || mainImage;
 
   // URL de redirection selon le mode
-  const linkHref = mode === "collection"
-    ? `/catalog?collection=${encodeURIComponent(watch.collection)}`
-    : `/watch/${watch.id}`;
+  const linkHref =
+    mode === "collection"
+      ? `/catalog?collection=${encodeURIComponent(watch.collection)}`
+      : `/watch/${watch.id}`;
 
   return (
     <Link
@@ -155,12 +159,14 @@ export default function ProductCard({ watch, mode = "product" }: ProductCardProp
             <div className="mt-2 pt-3 border-t border-neutral-100 space-y-1">
               {watch.specifications.movement && (
                 <p className="text-xs text-neutral-600">
-                  <span className="font-medium">Mouvement:</span> {watch.specifications.movement}
+                  <span className="font-medium">Mouvement:</span>{" "}
+                  {watch.specifications.movement}
                 </p>
               )}
               {watch.specifications.diameter && (
                 <p className="text-xs text-neutral-600">
-                  <span className="font-medium">Diamètre:</span> {watch.specifications.diameter}
+                  <span className="font-medium">Diamètre:</span>{" "}
+                  {watch.specifications.diameter}
                 </p>
               )}
             </div>

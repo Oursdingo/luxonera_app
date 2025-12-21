@@ -46,10 +46,11 @@ export default function WatchPage({ params }: PageProps) {
 
   // Get color variants from same collection (excluding Main and current watch)
   const colorVariants = watches
-    .filter((w) =>
-      w.collection === watch.collection &&
-      w.id !== watch.id &&
-      w.color !== "Main"
+    .filter(
+      (w) =>
+        w.collection === watch.collection &&
+        w.id !== watch.id &&
+        w.color !== "Main"
     )
     .slice(0, 6);
 
@@ -198,7 +199,9 @@ export default function WatchPage({ params }: PageProps) {
                 <dl className="space-y-4">
                   {watch.specifications.movement && (
                     <div className="flex justify-between py-3 border-b border-neutral-100">
-                      <dt className="font-medium text-neutral-800">Mouvement</dt>
+                      <dt className="font-medium text-neutral-800">
+                        Mouvement
+                      </dt>
                       <dd className="text-neutral-600">
                         {watch.specifications.movement}
                       </dd>
@@ -222,7 +225,9 @@ export default function WatchPage({ params }: PageProps) {
                   )}
                   {watch.specifications.waterResistance && (
                     <div className="flex justify-between py-3 border-b border-neutral-100">
-                      <dt className="font-medium text-neutral-800">Étanchéité</dt>
+                      <dt className="font-medium text-neutral-800">
+                        Étanchéité
+                      </dt>
                       <dd className="text-neutral-600">
                         {watch.specifications.waterResistance}
                       </dd>
@@ -239,22 +244,23 @@ export default function WatchPage({ params }: PageProps) {
                 </dl>
 
                 {/* Features */}
-                {watch.specifications.features && watch.specifications.features.length > 0 && (
-                  <div className="mt-6">
-                    <h3 className="font-medium mb-3">Caractéristiques</h3>
-                    <ul className="space-y-2">
-                      {watch.specifications.features.map((feature, index) => (
-                        <li
-                          key={index}
-                          className="flex items-start gap-2 text-neutral-600"
-                        >
-                          <span className="text-accent-gold mt-1">✓</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                {watch.specifications.features &&
+                  watch.specifications.features.length > 0 && (
+                    <div className="mt-6">
+                      <h3 className="font-medium mb-3">Caractéristiques</h3>
+                      <ul className="space-y-2">
+                        {watch.specifications.features.map((feature, index) => (
+                          <li
+                            key={index}
+                            className="flex items-start gap-2 text-neutral-600"
+                          >
+                            <span className="text-accent-gold mt-1">✓</span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
               </div>
             )}
           </div>
