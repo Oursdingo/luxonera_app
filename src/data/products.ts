@@ -305,7 +305,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: false,
+    inStock: true,
     featured: true,
   },
   {
