@@ -203,6 +203,7 @@ export const watches: Watch[] = [
     color: "Main",
     images: {
       main: "/images/watches/casio/casio_g-shock/main/casio_g-shock-main.jpg",
+      gallery: ["/images/watches/casio/casio_g-shock/coffret/coffret.png"],
     },
     description:
       "Icône de robustesse et d'innovation depuis 1983, la G-Shock est conçue pour résister aux chocs les plus extrêmes. Avec sa résistance aux chocs, son étanchéité 200m et son design audacieux, elle est le choix parfait pour les aventuriers et sportifs. Dotée d'un chronomètre, d'une alarme et d'un rétroéclairage, cette montre combine performance et style urbain inimitable.",
@@ -219,6 +220,7 @@ export const watches: Watch[] = [
     color: "Noir",
     images: {
       main: "/images/watches/casio/casio_g-shock/black/casio_g-shock-1.jpg",
+      gallery: ["/images/watches/casio/casio_g-shock/coffret/coffret.png"],
     },
     description:
       "Icône de robustesse et d'innovation depuis 1983, la G-Shock est conçue pour résister aux chocs les plus extrêmes. Avec sa résistance aux chocs, son étanchéité 200m et son design audacieux, elle est le choix parfait pour les aventuriers et sportifs. Dotée d'un chronomètre, d'une alarme et d'un rétroéclairage, cette montre combine performance et style urbain inimitable.",
@@ -235,6 +237,7 @@ export const watches: Watch[] = [
     color: "Noir cristal",
     images: {
       main: "/images/watches/casio/casio_g-shock/transparent_black/casio_g-shock-main.jpg",
+      gallery: ["/images/watches/casio/casio_g-shock/coffret/coffret.png"],
     },
     description:
       "Icône de robustesse et d'innovation depuis 1983, la G-Shock est conçue pour résister aux chocs les plus extrêmes. Avec sa résistance aux chocs, son étanchéité 200m et son design audacieux, elle est le choix parfait pour les aventuriers et sportifs. Dotée d'un chronomètre, d'une alarme et d'un rétroéclairage, cette montre combine performance et style urbain inimitable.",
