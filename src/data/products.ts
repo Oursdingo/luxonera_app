@@ -56,7 +56,7 @@ export const watches: Watch[] = [
     collection: "Aura Chiffres Arabes",
     price: 10000,
     currency: "FCFA",
-    color: "Noir Bleue",
+    color: "Noir Bleu",
     images: {
       main: "/images/watches/aura/aura_arabic_numerals/black_blue/blue.png",
     },
@@ -393,7 +393,7 @@ export const watches: Watch[] = [
     name: "Moonstone Rose",
     brand: "CURREN",
     collection: "Curren Blanche",
-    price: 25000,
+    price: 20000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -606,7 +606,7 @@ export const watches: Watch[] = [
     name: "All black",
     brand: "CURREN",
     collection: "Curren Classique",
-    price: 20000,
+    price: 15000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -676,7 +676,7 @@ export const watches: Watch[] = [
     collection: "Curren Classique",
     price: 15000,
     currency: "FCFA",
-    color: "Argent Bleue",
+    color: "Argent Bleu",
     images: {
       main: "/images/watches/curren/curren_classique/silver_blue_2/silver_blue_2.png",
       gallery: ["/images/watches/curren/curren_classique/coffret/coffret.png"],
@@ -1060,6 +1060,9 @@ export const watches: Watch[] = [
     color: "Main",
     images: {
       main: "/images/watches/omega/omega_mecanique/main/main.png",
+      gallery: [
+        "/images/watches/omega/omega_mecanique/coffret/coffret-ouvert.png",
+      ],
     },
     description:
       "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
@@ -1073,9 +1076,13 @@ export const watches: Watch[] = [
     collection: "Omega Mecanique",
     price: 20000,
     currency: "FCFA",
-    color: "Argent Bleue",
+    color: "Argent Bleu",
     images: {
       main: "/images/watches/omega/omega_mecanique/ocean/ocean.png",
+      gallery: [
+        "/images/watches/omega/omega_mecanique/coffret/coffret-ouvert.png",
+        "/images/watches/omega/omega_mecanique/coffret/coffret-fermer.png",
+      ],
     },
     description:
       "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
@@ -1092,6 +1099,10 @@ export const watches: Watch[] = [
     color: "Argent Blanc",
     images: {
       main: "/images/watches/omega/omega_mecanique/all_silver/all_silver.png",
+      gallery: [
+        "/images/watches/omega/omega_mecanique/coffret/coffret-ouvert.png",
+        "/images/watches/omega/omega_mecanique/coffret/coffret-fermer.png",
+      ],
     },
     description:
       "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
@@ -1108,6 +1119,10 @@ export const watches: Watch[] = [
     color: "Argent Blanc",
     images: {
       main: "/images/watches/omega/omega_mecanique/silver_blue/silver_blue.png",
+      gallery: [
+        "/images/watches/omega/omega_mecanique/coffret/coffret-ouvert.png",
+        "/images/watches/omega/omega_mecanique/coffret/coffret-fermer.png",
+      ],
     },
     description:
       "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
@@ -1335,7 +1350,7 @@ export const watches: Watch[] = [
     name: "Brown Leather",
     brand: "TOMY",
     collection: "Tomy Bracelet Cuir",
-    price: 30000,
+    price: 25000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -1351,7 +1366,7 @@ export const watches: Watch[] = [
     name: "Black Leather",
     brand: "TOMY",
     collection: "Tomy Bracelet Cuir",
-    price: 30000,
+    price: 25000,
     currency: "FCFA",
     color: "Cuir Noir",
     images: {
@@ -1367,7 +1382,7 @@ export const watches: Watch[] = [
     name: "Brown Leather",
     brand: "TOMY",
     collection: "Tomy Bracelet Cuir",
-    price: 30000,
+    price: 25000,
     currency: "FCFA",
     color: "Cuir Marron",
     images: {
