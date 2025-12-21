@@ -84,7 +84,13 @@ export default function Footer() {
           <p>
             &copy; {new Date().getFullYear()} Luxonera. Tous droits réservés.
           </p>
-          <p className="mt-2">L&apos;excellence horlogère</p>
+          <p className="mt-2">
+            {" "}
+            Site Web réalisé par
+            <a href="https://portofolio-jade-mu.vercel.app/">
+              &nbsp;Adam&apos;s<span className="text-[#E73C3C]">Coding</span>
+            </a>
+          </p>
         </div>
       </div>
     </footer>
