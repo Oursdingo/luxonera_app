@@ -1,9 +1,9 @@
 "use client";
 
-import { Testimonial } from '@/types/testimonial';
-import { Star, Quote, Play, CheckCircle, MessageCircle } from 'lucide-react';
-import Image from 'next/image';
-import { useState } from 'react';
+import { Testimonial } from "@/types/testimonial";
+import { Star, Quote, Play, CheckCircle, MessageCircle } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
@@ -21,7 +21,11 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
           <Star
             key={i}
             size={16}
-            className={i < testimonial.rating! ? 'fill-accent-gold text-accent-gold' : 'text-neutral-300'}
+            className={
+              i < testimonial.rating!
+                ? "fill-accent-gold text-accent-gold"
+                : "text-neutral-300"
+            }
           />
         ))}
       </div>
@@ -31,27 +35,33 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   // Formater la date
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return new Intl.DateTimeFormat('fr-FR', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
+    return new Intl.DateTimeFormat("fr-FR", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
     }).format(date);
   };
 
   // Badge platform pour conversations
   const renderPlatformBadge = () => {
-    if (testimonial.type !== 'conversation' || !testimonial.platform) return null;
+    if (testimonial.type !== "conversation" || !testimonial.platform)
+      return null;
 
     const platformConfig = {
-      whatsapp: { label: 'WhatsApp', color: 'bg-green-500' },
-      instagram: { label: 'Instagram', color: 'bg-gradient-to-r from-purple-500 to-pink-500' },
-      email: { label: 'Email', color: 'bg-blue-500' }
+      whatsapp: { label: "WhatsApp", color: "bg-green-500" },
+      instagram: {
+        label: "Instagram",
+        color: "bg-gradient-to-r from-purple-500 to-pink-500",
+      },
+      email: { label: "Email", color: "bg-blue-500" },
     };
 
     const config = platformConfig[testimonial.platform];
 
     return (
-      <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-white text-xs font-medium ${config.color}`}>
+      <div
+        className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-white text-xs font-medium ${config.color}`}
+      >
         <MessageCircle size={14} />
         {config.label}
       </div>
@@ -59,11 +69,17 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   };
 
   // Card de témoignage texte
-  if (testimonial.type === 'text') {
+  if (testimonial.type === "text") {
     return (
       <div className="bg-neutral-50 rounded-lg p-4 sm:p-6 hover:shadow-xl transition-all duration-300 group">
-        <Quote size={24} className="sm:hidden text-accent-gold mb-3 opacity-40 group-hover:opacity-100 transition-opacity" />
-        <Quote size={32} className="hidden sm:block text-accent-gold mb-4 opacity-40 group-hover:opacity-100 transition-opacity" />
+        <Quote
+          size={24}
+          className="sm:hidden text-accent-gold mb-3 opacity-40 group-hover:opacity-100 transition-opacity"
+        />
+        <Quote
+          size={32}
+          className="hidden sm:block text-accent-gold mb-4 opacity-40 group-hover:opacity-100 transition-opacity"
+        />
 
         {renderStars()}
 
@@ -74,23 +90,32 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-neutral-200">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <p className="font-display font-semibold text-black text-sm sm:text-base">{testimonial.customerName}</p>
+              <p className="font-display font-semibold text-black text-sm sm:text-base">
+                {testimonial.customerName}
+              </p>
               {testimonial.verified && (
-                <CheckCircle size={14} className="sm:size-4 text-accent-gold flex-shrink-0" />
+                <CheckCircle
+                  size={14}
+                  className="sm:size-4 text-accent-gold flex-shrink-0"
+                />
               )}
             </div>
             {testimonial.collection && (
-              <p className="text-xs text-neutral-500 uppercase tracking-wider">{testimonial.collection}</p>
+              <p className="text-xs text-neutral-500 uppercase tracking-wider">
+                {testimonial.collection}
+              </p>
             )}
           </div>
-          <p className="text-xs text-neutral-400">{formatDate(testimonial.date)}</p>
+          <p className="text-xs text-neutral-400">
+            {formatDate(testimonial.date)}
+          </p>
         </div>
       </div>
     );
   }
 
   // Card de photo client
-  if (testimonial.type === 'photo' && testimonial.imageUrl) {
+  if (testimonial.type === "photo" && testimonial.imageUrl) {
     return (
       <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
         <div className="relative aspect-[3/4] bg-neutral-100">
@@ -118,14 +143,18 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-3 border-t border-neutral-100">
             <div>
-              <p className="font-display font-semibold text-black text-sm">{testimonial.customerName}</p>
+              <p className="font-display font-semibold text-black text-sm">
+                {testimonial.customerName}
+              </p>
               {testimonial.collection && (
                 <p className="text-xs text-neutral-500 uppercase tracking-wider mt-0.5">
                   {testimonial.collection}
                 </p>
               )}
             </div>
-            <p className="text-xs text-neutral-400">{formatDate(testimonial.date)}</p>
+            <p className="text-xs text-neutral-400">
+              {formatDate(testimonial.date)}
+            </p>
           </div>
         </div>
       </div>
@@ -133,13 +162,15 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   }
 
   // Card de conversation (screenshot WhatsApp/Instagram)
-  if (testimonial.type === 'conversation' && testimonial.conversationImageUrl) {
+  if (testimonial.type === "conversation" && testimonial.conversationImageUrl) {
     return (
       <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group border border-neutral-200">
-        <div className="p-2 sm:p-3 bg-neutral-50 border-b border-neutral-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+        {/* <div className="p-2 sm:p-3 bg-neutral-50 border-b border-neutral-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
           {renderPlatformBadge()}
-          <p className="text-xs text-neutral-400">{formatDate(testimonial.date)}</p>
-        </div>
+          <p className="text-xs text-neutral-400">
+            {formatDate(testimonial.date)}
+          </p>
+        </div> */}
 
         <div className="relative w-full bg-neutral-100">
           <Image
@@ -150,18 +181,16 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
             className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-300"
           />
         </div>
-
-        <div className="p-3 sm:p-4 bg-neutral-50">
-          <p className="font-display text-xs sm:text-sm text-neutral-600">
-            Conversation avec <span className="text-black font-semibold">{testimonial.customerName}</span>
-          </p>
-        </div>
       </div>
     );
   }
 
   // Card de vidéo témoignage
-  if (testimonial.type === 'video' && testimonial.videoUrl && testimonial.thumbnailUrl) {
+  if (
+    testimonial.type === "video" &&
+    testimonial.videoUrl &&
+    testimonial.thumbnailUrl
+  ) {
     return (
       <div className="bg-black rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group">
         <div className="relative aspect-video bg-neutral-900">
@@ -179,7 +208,11 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
               >
                 <div className="bg-accent-gold text-black p-3 sm:p-5 rounded-full group-hover:scale-110 transition-transform">
                   <Play size={24} fill="currentColor" className="sm:hidden" />
-                  <Play size={32} fill="currentColor" className="hidden sm:block" />
+                  <Play
+                    size={32}
+                    fill="currentColor"
+                    className="hidden sm:block"
+                  />
                 </div>
               </button>
               {testimonial.verified && (
@@ -209,14 +242,18 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-3 border-t border-neutral-700">
             <div>
-              <p className="font-display font-semibold text-white text-sm">{testimonial.customerName}</p>
+              <p className="font-display font-semibold text-white text-sm">
+                {testimonial.customerName}
+              </p>
               {testimonial.collection && (
                 <p className="text-xs text-accent-gold uppercase tracking-wider mt-0.5">
                   {testimonial.collection}
                 </p>
               )}
             </div>
-            <p className="text-xs text-neutral-500">{formatDate(testimonial.date)}</p>
+            <p className="text-xs text-neutral-500">
+              {formatDate(testimonial.date)}
+            </p>
           </div>
         </div>
       </div>
