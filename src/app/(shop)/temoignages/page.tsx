@@ -125,11 +125,6 @@ export default function TestimonialsPage() {
                 spanClass = 'md:col-span-2'; // Featured prend 2 colonnes sur desktop
               }
 
-              // Les conversations sont plus hautes (format portrait)
-              if (isConversation) {
-                spanClass += ' row-span-2';
-              }
-
               return (
                 <div
                   key={testimonial.id}

@@ -33,7 +33,7 @@ export const testimonials: Testimonial[] = [
     type: 'conversation',
     customerName: 'Marc Laurent',
     date: '2024-12-05',
-    conversationImageUrl: '/testimonials/conversations/whatsapp-conversation-1.svg',
+    conversationImageUrl: '/testimonials/conversations/conversation-1.jpeg',
     platform: 'whatsapp',
     featured: false
   },
@@ -77,14 +77,14 @@ export const testimonials: Testimonial[] = [
     collection: 'Sport & Performance'
   },
 
-  // Conversation Instagram
+  // Conversation WhatsApp
   {
     id: '7',
     type: 'conversation',
     customerName: 'Laura Moreau',
     date: '2024-11-20',
-    conversationImageUrl: '/testimonials/conversations/instagram-conversation-1.svg',
-    platform: 'instagram'
+    conversationImageUrl: '/testimonials/conversations/conversation-2.jpeg',
+    platform: 'whatsapp'
   },
 
   // Témoignage texte
@@ -117,7 +117,7 @@ export const testimonials: Testimonial[] = [
     type: 'conversation',
     customerName: 'Pierre Garnier',
     date: '2024-11-10',
-    conversationImageUrl: '/testimonials/conversations/whatsapp-conversation-2.svg',
+    conversationImageUrl: '/testimonials/conversations/conversation-3.jpeg',
     platform: 'whatsapp'
   },
 
@@ -145,6 +145,46 @@ export const testimonials: Testimonial[] = [
     text: "Excellent rapport qualité/prix. J'ai comparé avec d'autres revendeurs et LUXONÉRA offre les meilleurs prix avec un service client au top. Montre reçue en 48h, emballage soigné.",
     collection: 'Sport & Performance',
     verified: true
+  },
+
+  // Conversation WhatsApp
+  {
+    id: '13',
+    type: 'conversation',
+    customerName: 'Sarah Konaté',
+    date: '2024-12-20',
+    conversationImageUrl: '/testimonials/conversations/conversation-4.jpeg',
+    platform: 'whatsapp'
+  },
+
+  // Conversation WhatsApp
+  {
+    id: '14',
+    type: 'conversation',
+    customerName: 'Ibrahim Traoré',
+    date: '2024-12-18',
+    conversationImageUrl: '/testimonials/conversations/conversation-5.jpeg',
+    platform: 'whatsapp'
+  },
+
+  // Conversation WhatsApp
+  {
+    id: '15',
+    type: 'conversation',
+    customerName: 'Aminata Ouédraogo',
+    date: '2024-12-15',
+    conversationImageUrl: '/testimonials/conversations/conversation-6.jpeg',
+    platform: 'whatsapp'
+  },
+
+  // Conversation WhatsApp
+  {
+    id: '16',
+    type: 'conversation',
+    customerName: 'Boubacar Sawadogo',
+    date: '2024-12-12',
+    conversationImageUrl: '/testimonials/conversations/conversation-7.jpeg',
+    platform: 'whatsapp'
   }
 ];
 

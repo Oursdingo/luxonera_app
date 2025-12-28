@@ -36,11 +36,22 @@ export default function WatchPage({ params }: PageProps) {
   };
 
   const handleWhatsAppOrder = () => {
-    const message = `Bonjour! Je suis intéressé par la montre ${
-      watch.name
-    } (${formatPrice(
-      watch.price
-    )}). Pouvez-vous me donner plus d&apos;informations?`;
+    let message = `🛍️ COMMANDE LUXONERA\n\n`;
+    message += `Je souhaite commander:\n\n`;
+    message += `📦 Montre: ${watch.name}\n`;
+
+    if (watch.collection) {
+      message += `   - Collection: ${watch.collection}\n`;
+    }
+
+    if (watch.color && watch.color !== "Main") {
+      message += `   - Couleur: ${watch.color}\n`;
+    }
+
+    message += `   - Prix: ${formatPrice(watch.price)}\n\n`;
+
+    message += `✅ Merci de me confirmer la disponibilité et les modalités de livraison.`;
+
     openWhatsAppChat(message);
   };
 
@@ -165,7 +176,7 @@ export default function WatchPage({ params }: PageProps) {
             </div>
 
             {/* Actions */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <Button
                 onClick={handleAddToCart}
                 disabled={!watch.inStock}
@@ -177,9 +188,14 @@ export default function WatchPage({ params }: PageProps) {
               </Button>
               <Button
                 onClick={handleWhatsAppOrder}
+                disabled={watch.inStock}
                 variant="secondary"
                 size="lg"
-                className="flex-1 bg-[#25D366] hover:bg-[#128C7E] text-white border-0"
+                className={`flex-1 ${
+                  watch.inStock
+                    ? "bg-neutral-300 cursor-not-allowed text-neutral-500"
+                    : "bg-[#25D366] hover:bg-[#128C7E] text-white"
+                } border-0`}
               >
                 <svg
                   className="w-5 h-5 mr-2"
@@ -190,6 +206,21 @@ export default function WatchPage({ params }: PageProps) {
                 </svg>
                 Commander
               </Button>
+            </div>
+
+            {/* Helper Message */}
+            <div className="mb-8">
+              {watch.inStock ? (
+                <p className="text-sm text-neutral-600 bg-neutral-50 p-3 rounded-lg border border-neutral-200">
+                  💡 Pour commander ce produit en stock, veuillez l&apos;ajouter
+                  au panier et finaliser votre commande.
+                </p>
+              ) : (
+                <p className="text-sm text-neutral-600 bg-amber-50 p-3 rounded-lg border border-amber-200">
+                  ⚠️ Ce produit est en rupture de stock. Contactez-nous via
+                  WhatsApp pour connaître la date de réapprovisionnement.
+                </p>
+              )}
             </div>
 
             {/* Specifications */}

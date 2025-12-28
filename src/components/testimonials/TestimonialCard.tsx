@@ -141,12 +141,13 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
           <p className="text-xs text-neutral-400">{formatDate(testimonial.date)}</p>
         </div>
 
-        <div className="relative aspect-[9/16] bg-neutral-100">
+        <div className="relative w-full bg-neutral-100">
           <Image
             src={testimonial.conversationImageUrl}
             alt={`Conversation avec ${testimonial.customerName}`}
-            fill
-            className="object-contain group-hover:scale-[1.02] transition-transform duration-300"
+            width={800}
+            height={1400}
+            className="w-full h-auto object-contain group-hover:scale-[1.02] transition-transform duration-300"
           />
         </div>
 

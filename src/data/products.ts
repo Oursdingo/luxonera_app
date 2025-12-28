@@ -110,7 +110,7 @@ export const watches: Watch[] = [
     },
     description:
       "Cette montre CASIO se distingue par son design moderne et épuré. Son boîtier rectangulaire et son bracelet en acier apportent une allure élégante, parfaite pour un usage quotidien ou professionnel.Fiable et précise grâce à son mouvement quartz, elle offre une lecture claire du temps avec un affichage de la date parfaitement intégré. Discrète, confortable et intemporelle, cette montre devient rapidement un indispensable pour ceux qui apprécient les détails soignés et la simplicité raffinée.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -126,7 +126,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre Casio au style intemporel et fonctionnel. Avec son design rectangulaire caractéristique et son affichage digital clair, elle incarne l'héritage de Casio depuis les années 80. Robuste et fiable, cette montre offre des fonctions essentielles comme le chronomètre, l'alarme et l'éclairage LED. Parfaite pour un usage quotidien avec son excellent rapport qualité-prix.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -321,12 +321,12 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
     id: "casio-casio-wr-silver-blue",
-    name: "Aquaman",
+    name: "Oeil océan",
     brand: "CASIO",
     collection: "Casio Water Resistant",
     price: 10000,
@@ -385,7 +385,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -582,7 +582,7 @@ export const watches: Watch[] = [
     },
     description:
       "Chronographe sportif au profil élégant et fonctionnel. Alliant performance et style, cette montre dispose de sous-cadrans chronographes dans un boîtier fin et moderne. Son design sportif-chic la rend polyvalente, passant aisément du bureau aux activités sportives. Précision du mouvement quartz et esthétique contemporaine réunies.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -598,7 +598,7 @@ export const watches: Watch[] = [
     },
     description:
       "Chronographe sportif au profil élégant et fonctionnel. Alliant performance et style, cette montre dispose de sous-cadrans chronographes dans un boîtier fin et moderne. Son design sportif-chic la rend polyvalente, passant aisément du bureau aux activités sportives. Précision du mouvement quartz et esthétique contemporaine réunies.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -683,7 +683,7 @@ export const watches: Watch[] = [
     },
     description:
       "Design classique intemporel pour homme moderne et raffiné. Cette montre Curren Classique incarne l'équilibre parfait entre tradition horlogère et modernité. Son cadran sobre, ses index élégants et son bracelet en acier inoxydable en font un choix versatile pour toutes occasions. Qualité et style à prix accessible.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -732,7 +732,7 @@ export const watches: Watch[] = [
     },
     description:
       "Cadran squelette révélant la mécanique fascinante du mouvement. Cette montre Curren Skeleton offre un spectacle captivant avec son design à cœur ouvert. Le mécanisme visible à travers le cadran ajouré fascine et séduit les amateurs d'horlogerie. Un bijou technique au poignet qui allie art mécanique et design contemporain audacieux.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -1009,7 +1009,7 @@ export const watches: Watch[] = [
     },
     description:
       "Horlogerie de luxe suisse incarnant 'l'art de la fusion'. Hublot révolutionne l'horlogerie en combinant tradition et innovation avec des matériaux nobles et avant-gardistes. Cette montre mécanique incarne le savoir-faire suisse avec son mouvement automatique précis, son design audacieux et ses finitions exceptionnelles. Un symbole de prestige et d'excellence horlogère.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -1086,7 +1086,7 @@ export const watches: Watch[] = [
     },
     description:
       "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {

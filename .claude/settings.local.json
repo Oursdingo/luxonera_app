@@ -10,7 +10,9 @@
       "Bash(git push:*)",
       "Bash(git add:*)",
       "Bash(cat:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(dir /s /b \"c:\\\\Users\\\\Mr.Adam''s\\\\Desktop\\\\Decouverte\\\\projet\\\\luxonera\\\\src\\\\app\")",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []
