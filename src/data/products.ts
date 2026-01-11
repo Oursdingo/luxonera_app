@@ -94,7 +94,7 @@ export const watches: Watch[] = [
     },
     description:
       "Cette montre CASIO se distingue par son design moderne et épuré. Son boîtier rectangulaire et son bracelet en acier apportent une allure élégante, parfaite pour un usage quotidien ou professionnel.Fiable et précise grâce à son mouvement quartz, elle offre une lecture claire du temps avec un affichage de la date parfaitement intégré. Discrète, confortable et intemporelle, cette montre devient rapidement un indispensable pour ceux qui apprécient les détails soignés et la simplicité raffinée.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
@@ -110,7 +110,7 @@ export const watches: Watch[] = [
     },
     description:
       "Cette montre CASIO se distingue par son design moderne et épuré. Son boîtier rectangulaire et son bracelet en acier apportent une allure élégante, parfaite pour un usage quotidien ou professionnel.Fiable et précise grâce à son mouvement quartz, elle offre une lecture claire du temps avec un affichage de la date parfaitement intégré. Discrète, confortable et intemporelle, cette montre devient rapidement un indispensable pour ceux qui apprécient les détails soignés et la simplicité raffinée.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
@@ -126,7 +126,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre Casio au style intemporel et fonctionnel. Avec son design rectangulaire caractéristique et son affichage digital clair, elle incarne l'héritage de Casio depuis les années 80. Robuste et fiable, cette montre offre des fonctions essentielles comme le chronomètre, l'alarme et l'éclairage LED. Parfaite pour un usage quotidien avec son excellent rapport qualité-prix.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
@@ -158,7 +158,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre Casio au style intemporel et fonctionnel. Avec son design rectangulaire caractéristique et son affichage digital clair, elle incarne l'héritage de Casio depuis les années 80. Robuste et fiable, cette montre offre des fonctions essentielles comme le chronomètre, l'alarme et l'éclairage LED. Parfaite pour un usage quotidien avec son excellent rapport qualité-prix.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
@@ -321,7 +321,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
@@ -353,7 +353,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
@@ -369,7 +369,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
@@ -385,7 +385,7 @@ export const watches: Watch[] = [
     },
     description:
       "Montre résistante à l'eau avec fonctions pratiques au quotidien. Le modèle WR (Water Resistant) allie design sportif et élégance décontractée. Dotée d'une résistance à l'eau, d'un affichage analogique clair et d'un bracelet en acier inoxydable, cette montre est idéale pour accompagner vos activités quotidiennes avec style et fiabilité.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
@@ -418,7 +418,7 @@ export const watches: Watch[] = [
     },
     description:
       "Élégance raffinée avec cadran blanc et finitions luxueuses. Cette montre Curren combine style business et sophistication avec son design épuré. Le cadran blanc lumineux contraste magnifiquement avec le boîtier métallique, créant un look intemporel. Équipée d'un mouvement quartz précis et d'un bracelet confortable, elle est parfaite pour les occasions formelles comme décontractées.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
