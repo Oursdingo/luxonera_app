@@ -418,7 +418,7 @@ export const watches: Watch[] = [
     },
     description:
       "Élégance raffinée avec cadran blanc et finitions luxueuses. Cette montre Curren combine style business et sophistication avec son design épuré. Le cadran blanc lumineux contraste magnifiquement avec le boîtier métallique, créant un look intemporel. Équipée d'un mouvement quartz précis et d'un bracelet confortable, elle est parfaite pour les occasions formelles comme décontractées.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -469,7 +469,7 @@ export const watches: Watch[] = [
     },
     description:
       "Élégance raffinée avec cadran blanc et finitions luxueuses. Cette montre Curren combine style business et sophistication avec son design épuré. Le cadran blanc lumineux contraste magnifiquement avec le boîtier métallique, créant un look intemporel. Équipée d'un mouvement quartz précis et d'un bracelet confortable, elle est parfaite pour les occasions formelles comme décontractées.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -518,7 +518,7 @@ export const watches: Watch[] = [
     },
     description:
       "Version ultra-fine au design minimaliste et moderne. Cette montre slim profile offre une élégance discrète avec son boîtier extra-plat. Son cadran blanc épuré et ses index raffinés en font l'accessoire idéal pour un style sophistiqué. Légère et confortable, elle se glisse facilement sous une chemise pour un look professionnel impeccable.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -534,7 +534,7 @@ export const watches: Watch[] = [
     },
     description:
       "Version ultra-fine au design minimaliste et moderne. Cette montre slim profile offre une élégance discrète avec son boîtier extra-plat. Son cadran blanc épuré et ses index raffinés en font l'accessoire idéal pour un style sophistiqué. Légère et confortable, elle se glisse facilement sous une chemise pour un look professionnel impeccable.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -649,7 +649,7 @@ export const watches: Watch[] = [
     },
     description:
       "Design classique intemporel pour homme moderne et raffiné. Cette montre Curren Classique incarne l'équilibre parfait entre tradition horlogère et modernité. Son cadran sobre, ses index élégants et son bracelet en acier inoxydable en font un choix versatile pour toutes occasions. Qualité et style à prix accessible.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -700,7 +700,7 @@ export const watches: Watch[] = [
     },
     description:
       "Design classique intemporel pour homme moderne et raffiné. Cette montre Curren Classique incarne l'équilibre parfait entre tradition horlogère et modernité. Son cadran sobre, ses index élégants et son bracelet en acier inoxydable en font un choix versatile pour toutes occasions. Qualité et style à prix accessible.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -865,7 +865,7 @@ export const watches: Watch[] = [
     },
     description:
       "Minimalisme scandinave avec fonctions chronographe élégantes. Inspirée par le design nordique épuré, cette montre DW Chronographe allie simplicité et fonctionnalité. Son cadran blanc immaculé, ses sous-cadrans discrets et son bracelet en cuir de qualité créent une harmonie parfaite. L'essence du style scandinave intemporel à votre poignet.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -1106,7 +1106,7 @@ export const watches: Watch[] = [
     },
     description:
       "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -1126,7 +1126,7 @@ export const watches: Watch[] = [
     },
     description:
       "Incarnation de l'élégance horlogère suisse, la collection Omega De Ville reflète un équilibre parfait entre tradition, innovation et raffinement. Cette montre mécanique se distingue par son mouvement automatique de haute précision, intégrant le savoir-faire emblématique d'Omega et ses standards de qualité rigoureux. Son design épuré, aux lignes classiques et intemporelles, met en valeur des finitions d'exception et une lisibilité parfaite. Véritable expression de sophistication et de maîtrise horlogère, l'Omega De Ville mécanique s'adresse à ceux qui recherchent une montre de prestige, discrète et durable.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -1174,7 +1174,7 @@ export const watches: Watch[] = [
     },
     description:
       "Design élégant alliant classe business et sportivité moderne. Cette montre Poedegar Chronographe offre un cadran surdimensionné lumineux avec des fonctions chronographes pratiques. Son boîtier en acier inoxydable et son bracelet métallique assurent durabilité et confort. Un excellent rapport qualité-prix pour un style professionnel affirmé.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
@@ -1190,7 +1190,7 @@ export const watches: Watch[] = [
     },
     description:
       "Design élégant alliant classe business et sportivité moderne. Cette montre Poedegar Chronographe offre un cadran surdimensionné lumineux avec des fonctions chronographes pratiques. Son boîtier en acier inoxydable et son bracelet métallique assurent durabilité et confort. Un excellent rapport qualité-prix pour un style professionnel affirmé.",
-    inStock: true,
+    inStock: false,
     featured: false,
   },
   {
