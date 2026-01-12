@@ -6,7 +6,6 @@ export const watches: Watch[] = [
     name: "Aura Chiffres Arabes",
     brand: "AURA",
     collection: "Aura Chiffres Arabes",
-    price: 10000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -70,7 +69,6 @@ export const watches: Watch[] = [
     name: "All black",
     brand: "CASIO",
     collection: "Casio Classique",
-    price: 10000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -198,7 +196,6 @@ export const watches: Watch[] = [
     name: "Black cristal",
     brand: "CASIO",
     collection: "Casio G-Shock",
-    price: 12000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -249,7 +246,6 @@ export const watches: Watch[] = [
     name: "all gold",
     brand: "CASIO",
     collection: "Casio Vintage",
-    price: 12000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -297,7 +293,6 @@ export const watches: Watch[] = [
     name: "Silver œil pourpre",
     brand: "CASIO",
     collection: "Casio Water Resistant",
-    price: 10000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -393,7 +388,6 @@ export const watches: Watch[] = [
     name: "Moonstone Rose",
     brand: "CURREN",
     collection: "Curren Blanche",
-    price: 20000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -469,7 +463,7 @@ export const watches: Watch[] = [
     },
     description:
       "Élégance raffinée avec cadran blanc et finitions luxueuses. Cette montre Curren combine style business et sophistication avec son design épuré. Le cadran blanc lumineux contraste magnifiquement avec le boîtier métallique, créant un look intemporel. Équipée d'un mouvement quartz précis et d'un bracelet confortable, elle est parfaite pour les occasions formelles comme décontractées.",
-    inStock: false,
+    inStock: true,
     featured: false,
   },
   {
@@ -494,7 +488,6 @@ export const watches: Watch[] = [
     name: "Silver œil océan",
     brand: "CURREN",
     collection: "Curren Blanche Slim",
-    price: 12000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -558,7 +551,6 @@ export const watches: Watch[] = [
     name: "acier arctique",
     brand: "CURREN",
     collection: "Curren Chronographe Slim",
-    price: 20000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -606,7 +598,6 @@ export const watches: Watch[] = [
     name: "All black",
     brand: "CURREN",
     collection: "Curren Classique",
-    price: 15000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -708,7 +699,6 @@ export const watches: Watch[] = [
     name: "White Skeleton",
     brand: "CURREN",
     collection: "Curren Skeleton",
-    price: 25000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -740,7 +730,6 @@ export const watches: Watch[] = [
     name: "Titan Acier Arctique",
     brand: "CURREN",
     collection: "Curren Acier Inoxydable",
-    price: 25000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -816,7 +805,6 @@ export const watches: Watch[] = [
     name: "Brun Silver Chronographe",
     brand: "DANIEL_WELLINGTON",
     collection: "Daniel Wellington Chronographe",
-    price: 30000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -873,7 +861,6 @@ export const watches: Watch[] = [
     name: "Black Gold",
     brand: "DANIEL_WELLINGTON",
     collection: "Daniel Wellington Classique",
-    price: 12000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -953,7 +940,6 @@ export const watches: Watch[] = [
     name: "Silver Métal",
     brand: "HUBLOT",
     collection: "Hublot Mécanique",
-    price: 25000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -1017,7 +1003,6 @@ export const watches: Watch[] = [
     name: "Silver Black",
     brand: "HUGO BOSS",
     collection: "Hugo Boss Chronographe",
-    price: 50000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -1055,7 +1040,6 @@ export const watches: Watch[] = [
     name: "Oeil Océan",
     brand: "OMEGA",
     collection: "Omega Mecanique",
-    price: 20000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -1134,7 +1118,6 @@ export const watches: Watch[] = [
     name: "Acier Profond",
     brand: "POEDEGAR",
     collection: "Poedegar Chronographe",
-    price: 20000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -1214,7 +1197,6 @@ export const watches: Watch[] = [
     name: "Silver black",
     brand: "POEDEGAR",
     collection: "Poedegar Classique",
-    price: 15000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -1246,7 +1228,6 @@ export const watches: Watch[] = [
     name: "Rolex Oyster Perpetual",
     brand: "ROLEX",
     collection: "Rolex Mecanique",
-    price: 30000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -1280,7 +1261,6 @@ export const watches: Watch[] = [
     name: "All Silver",
     brand: "TOMY",
     collection: "Tomy Bracelet Acier",
-    price: 30000,
     currency: "FCFA",
     color: "Main",
     images: {
@@ -1350,7 +1330,6 @@ export const watches: Watch[] = [
     name: "Brown Leather",
     brand: "TOMY",
     collection: "Tomy Bracelet Cuir",
-    price: 25000,
     currency: "FCFA",
     color: "Main",
     images: {

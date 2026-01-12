@@ -8,7 +8,10 @@ export function cn(...inputs: ClassValue[]): string {
     .trim()
 }
 
-export function formatPrice(price: number, currency: string = 'FCFA'): string {
+export function formatPrice(price: number | undefined, currency: string = 'FCFA'): string {
+  if (price === undefined) {
+    return 'Prix sur demande';
+  }
   return `${price.toLocaleString('fr-FR')} ${currency}`
 }
 

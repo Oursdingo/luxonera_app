@@ -53,18 +53,26 @@ export default function CatalogContent() {
       filtered = filtered.filter((watch) => watch.collection === selectedCollection)
     }
 
-    // Filter by price range
+    // Filter by price range (skip items without price)
     filtered = filtered.filter(
-      (watch) => watch.price >= priceRange[0] && watch.price <= priceRange[1]
+      (watch) => watch.price !== undefined && watch.price >= priceRange[0] && watch.price <= priceRange[1]
     )
 
     // Sort
     switch (sortBy) {
       case 'price-asc':
-        filtered.sort((a, b) => a.price - b.price)
+        filtered.sort((a, b) => {
+          if (a.price === undefined) return 1;
+          if (b.price === undefined) return -1;
+          return a.price - b.price;
+        })
         break
       case 'price-desc':
-        filtered.sort((a, b) => b.price - a.price)
+        filtered.sort((a, b) => {
+          if (a.price === undefined) return 1;
+          if (b.price === undefined) return -1;
+          return b.price - a.price;
+        })
         break
       case 'name':
         filtered.sort((a, b) => a.name.localeCompare(b.name))

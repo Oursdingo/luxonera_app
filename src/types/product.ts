@@ -4,7 +4,7 @@ export interface Watch {
   name: string
   brand: string
   collection: string
-  price: number
+  price?: number
   currency: 'FCFA'
   color?: string
   images: {
