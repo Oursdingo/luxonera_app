@@ -18,7 +18,7 @@ export interface CheckoutData {
   items: Array<{
     name: string
     quantity: number
-    price: number
+    price?: number
     color?: string
     collection?: string
   }>

@@ -43,7 +43,11 @@ export function formatCartForWhatsApp(cart: CheckoutData): string {
       message += `   - Couleur: ${item.color}\n`;
     }
     message += `   - Quantité: ${item.quantity}\n`;
-    message += `   - Prix: ${item.price.toLocaleString("fr-FR")} FCFA\n\n`;
+    if (item.price !== undefined) {
+      message += `   - Prix: ${item.price.toLocaleString("fr-FR")} FCFA\n\n`;
+    } else {
+      message += `   - Prix: Sur demande\n\n`;
+    }
   });
 
   message += "------------------\n";

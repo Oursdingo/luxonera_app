@@ -10,6 +10,14 @@ export const useCartStore = create<CartState>()(
       items: [],
 
       addItem: (watch: Watch) => {
+        // Empêcher l'ajout d'items sans prix
+        if (watch.price === undefined) {
+          toast.error('Article non disponible', {
+            description: 'Cet article ne peut pas être ajouté au panier',
+          })
+          return
+        }
+
         set((state) => {
           const existing = state.items.find((item) => item.id === watch.id)
           if (existing) {
@@ -63,7 +71,10 @@ export const useCartStore = create<CartState>()(
 
       getTotalPrice: () => {
         const { items } = get()
-        return items.reduce((total, item) => total + item.price * item.quantity, 0)
+        return items.reduce((total, item) => {
+          const price = item.price ?? 0
+          return total + price * item.quantity
+        }, 0)
       },
 
       getTotalItems: () => {
